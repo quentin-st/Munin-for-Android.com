@@ -89,59 +89,54 @@
 
                 <h2>Features</h2>
                 <p>Munin for Android has a lot of great features! If you wish to add one, don't hesitate to <a href="mailto:support@munin-for-android.com">ask</a>!</p>
+
+                <?php
+                $free_features = array(
+                    '<b>Multi-server</b> support',
+                    '<b>Port</b> selection <span style="font-size:9px;">(ex: 88.180.108.192<u>:85</u>)</span>',
+                    '<b>2</b> sample servers to try the app',
+                    '4 <b>languages</b>*',
+                    'Save graphs on SD card',
+                    '<b>Labels</b>',
+                    'Plugins documentation',
+                    'MunStrap compatibility',
+                    '<b>HTTP Basic Auth</b> support'
+                );
+                $premium_features = array(
+                    '<b>HTTP Digest Auth</b> support',
+                    '<b>SSL</b> support',
+                    'Graphs <b>grids</b>',
+                    'Servers configuration import/export'
+                );
+                ?>
+
                 <table class="features card">
                     <tr class="ft_head">
                         <td class="ft_h"></td>
                         <td class="ft_h">Munin for Android</td>
                         <td class="ft_h">Features Pack</td>
                     </tr>
-                    <tr class="ft_line">
-                        <td class="ft_b"><b>HTTP Basic Auth</b> support</td>
-                        <td colspan="2" class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
-                    </tr>
-                    <tr class="ft_line ft_i">
-                        <td class="ft_b"><b>Multi-server</b> support</td>
-                        <td colspan="2" class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
-                    </tr>
-                    <tr class="ft_line">
-                        <td class="ft_b"><b>Port</b> selection <span style="font-size:9px;">(ex: 88.180.108.192<u>:85</u>)</span></td>
-                        <td colspan="2" class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
-                    </tr>
-                    <tr class="ft_line ft_i">
-                        <td class="ft_b"><b>Multi-touch</b> on-graph zoom</td>
-                        <td colspan="2" class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
-                    </tr>
-                    <tr class="ft_line">
-                        <td class="ft_b"><b>2</b> sample servers to try the app</td>
-                        <td colspan="2" class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
-                    </tr>
-                    <tr class="ft_line ft_i">
-                        <td class="ft_b">4 <b>languages</b>*</td>
-                        <td colspan="2" class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
-                    </tr>
-                    <tr class="ft_line">
-                        <td class="ft_b">Save graphs on the SD card</td>
-                        <td colspan="2" class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
-                    </tr>
-                    <tr class="ft_line ft_i">
-                        <td class="ft_b"><b>Labels</b></td>
-                        <td colspan="2" class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
-                    </tr>
-                    <tr class="ft_line">
-                        <td class="ft_b"><b>HTTP Digest Auth</b> support</td>
-                        <td class="ft_c"><img src="img/navigation_cancel.png" alt="Not included" /></td>
-                        <td class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
-                    </tr>
-                    <tr class="ft_line ft_i">
-                        <td class="ft_b"><b>SSL</b> support</td>
-                        <td class="ft_c"><img src="img/navigation_cancel.png" alt="Not included" /></td>
-                        <td class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
-                    </tr>
-                    <tr class="ft_line">
-                        <td class="ft_b">Graphs <b>grids</b></td>
-                        <td class="ft_c"><img src="img/navigation_cancel.png" alt="Not included" /></td>
-                        <td class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
-                    </tr>
+                    <?php
+                    $i=0;
+                    foreach ($free_features as $free_feature) { ?>
+                        <tr class="ft_line <?php echo ($i%2==0)?'ft_i':'' ?>">
+                            <td class="ft_b"><?php echo $free_feature ?></td>
+                            <td colspan="2" class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
+                        </tr>
+                        <?php
+                        $i++;
+                    }
+
+                    foreach ($premium_features as $premium_feature) { ?>
+                        <tr class="ft_line <?php echo ($i%2==0)?'ft_i':'' ?>">
+                            <td class="ft_b"><?php echo $premium_feature ?></td>
+                            <td class="ft_c"><img src="img/navigation_cancel.png" alt="Not included" /></td>
+                            <td class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
+                        </tr>
+                        <?php
+                        $i++;
+                    }
+                    ?>
                     <tr class="ft_foot">
                         <td class="ft_f1">Price</td>
                         <td class="ft_f">FREE!</td>
@@ -177,11 +172,30 @@
                             --><li id="tab13" onclick="tabs(this);">2.5</li><!--
                             --><li id="tab14" onclick="tabs(this);">2.6</li><!--
                             --><li id="tab16" onclick="tabs(this);">2.7</li><!--
-                            --><li id="tab17" onclick="tabs(this);" class="selected">2.8</li>
+                            --><li id="tab17" onclick="tabs(this);">2.8</li><!--
+                            --><li id="tab18" onclick="tabs(this);" class="selected">3.0</li>
                         </ul>
                         <div id="tabContent" class="card"><ul>
-                            <li><span class="new">new</span>Servers grouped by master</li>
-                            <li><span class="fix">fix</span>Bug fixes</li>
+                            <li><span class="new">new</span>Servers import/export</li>
+                            <li><span class="new">new</span>Rescan masters for servers and plugins</li>
+                            <li><span class="new">new</span>Plugins documentation</li>
+                            <li><span class="new">fix</span>Fixed notifications battery drain</li>
+                            <li><span class="new">new</span>Connection information (SSL, basic/digest auth) information now
+                                attached to masters</li>
+                            <li><span class="fix">fix</span>Performances optimisations</li>
+                            <li><span class="new">new</span>MunStrap compatibility</li>
+                            <li><span class="new">new</span>Global search</li>
+                            <li><span class="new">new</span>HD Graphs</li>
+                            <li><span class="new">new</span>Dropped loading splash screen</li>
+                            <li><span class="new">new</span>Open plugin in browser</li>
+                            <li><span class="new">new</span>Tablets compatibility enhanced</li>
+                            <li><span class="new">new</span>Fields description</li>
+                            <li><span class="new">new</span>Flat/expanded alerts list</li>
+                            <li><span class="new">new</span>Graph zoom now deactivatable</li>
+                            <li><span class="new">new</span>Server configuration wizard redesigned</li>
+                            <li><span class="new">new</span>Contextual actions (rename servers, delete labels, ...)</li>
+                            <li><span class="new">new</span>Enhanced alerts loading</li>
+                            <li><span class="new">new</span>Vibration on notification</li>
                         </ul></div>
                     </div>
 
@@ -271,6 +285,28 @@
                     <div id="tab17Content" style="display:none;"><ul>
                         <li><span class="new">new</span>Servers grouped by master</li>
                         <li><span class="fix">fix</span>Bug fixes</li>
+                    </ul></div>
+                    <div id="tab18Content" style="display:none;"><ul>
+                        <li><span class="new">new</span>Servers import/export</li>
+                        <li><span class="new">new</span>Rescan masters for servers and plugins</li>
+                        <li><span class="new">new</span>Plugins documentation</li>
+                        <li><span class="new">fix</span>Fixed notifications battery drain</li>
+                        <li><span class="new">new</span>Connection information (SSL, basic/digest auth) information now
+                            attached to masters</li>
+                        <li><span class="fix">fix</span>Performances optimisations</li>
+                        <li><span class="new">new</span>MunStrap compatibility</li>
+                        <li><span class="new">new</span>Global search</li>
+                        <li><span class="new">new</span>HD Graphs</li>
+                        <li><span class="new">new</span>Dropped loading splash screen</li>
+                        <li><span class="new">new</span>Open plugin in browser</li>
+                        <li><span class="new">new</span>Tablets compatibility enhanced</li>
+                        <li><span class="new">new</span>Fields description</li>
+                        <li><span class="new">new</span>Flat/expanded alerts list</li>
+                        <li><span class="new">new</span>Graph zoom now deactivatable</li>
+                        <li><span class="new">new</span>Server configuration wizard redesigned</li>
+                        <li><span class="new">new</span>Contextual actions (rename servers, delete labels, ...)</li>
+                        <li><span class="new">new</span>Enhanced alerts loading</li>
+                        <li><span class="new">new</span>Vibration on notification</li>
                     </ul></div>
                 </div>
             </div>
