@@ -295,6 +295,7 @@
                             attached to masters</li>
                         <li><span class="fix">fix</span>Performances optimisations</li>
                         <li><span class="new">new</span>MunStrap compatibility</li>
+                        <li><span class="new">new</span>Custom user agent (<i>MuninForAndroid/3.0 (Android 4.4.4 KITKAT)</i> for example)</li>
                         <li><span class="new">new</span>Global search</li>
                         <li><span class="new">new</span>HD Graphs</li>
                         <li><span class="new">new</span>Dropped loading splash screen</li>
