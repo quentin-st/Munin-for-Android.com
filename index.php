@@ -95,18 +95,20 @@
                     '<b>Multi-server</b> support',
                     '<b>Port</b> selection <span style="font-size:9px;">(ex: 88.180.108.192<u>:85</u>)</span>',
                     '<b>2</b> sample servers to try the app',
-                    '4 <b>languages</b>*',
                     'Save graphs on SD card',
                     '<b>Labels</b>',
                     'Plugins documentation',
                     'MunStrap compatibility',
+                    '4 <b>languages</b>*',
                     '<b>HTTP Basic Auth</b> support'
                 );
                 $premium_features = array(
                     '<b>HTTP Digest Auth</b> support',
                     '<b>SSL</b> support',
                     'Graphs <b>grids</b>',
-                    'Servers configuration import/export'
+                    'Servers configuration import/export',
+                    'Graph widget',
+                    'Alerts widget'
                 );
                 ?>
 
