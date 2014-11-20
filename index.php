@@ -158,159 +158,194 @@
                 <div class="space"></div>
 
                 <h2>Changelog</h2>
+                <?php
+                $changelog = array(
+                    array(
+                        'version' => '1.1',
+                        'changelog' => array(
+                            ['new', 'First stable release']
+                        )
+                    ),
+                    array(
+                        'version' => '1.2',
+                        'changelog' => array(
+                            ['new', '<strong>Munin 2.0 support</strong>'],
+                            ['new', 'Graph favs'],
+                            ['new', 'Tutorial on first launch'],
+                            ['new', 'Design enhancements']
+                        )
+                    ),
+                    array(
+                        'version' => '1.3',
+                        'changelog' => array(
+                            ['new', '<strong>Apache Basic Auth support</strong>'],
+                            ['new', '2 settings pages: Server + Settings'],
+                            ['new', 'Choose default scale: day / week / month / year'],
+                            ['new', 'Android 2.X: design enhancement']
+                        )
+                    ),
+                    array(
+                        'version' => '1.4',
+                        'changelog' => array(
+                            ['new', '<strong>Multi-server support!</strong>'],
+                            ['new', '<strong>Multi-touch on-graph zoom</strong>'],
+                            ['new', 'Plugins real name now displayed'],
+                            ['fix', 'Critical issues correction'],
+                            ['fix', 'Graph double-load fixed'],
+                            ['new', 'Design changes'],
+                            ['new', 'Package size reduction (~80% of the previous version size)']
+                        )
+                    ),
+                    array(
+                        'version' => '1.4.2',
+                        'changelog' => array(
+                            ['new', '<b>Design enhancements</b>'],
+                            ['fix', 'Critical issues fixed'],
+                            ['fix', 'Server deleting fixed'],
+                            ['new', 'Local database optimisations'],
+                            ['fix', 'Fixed app crash with plugins whose name contaied special chars']
+                        )
+                    ),
+                    array(
+                        'version' => '2.0',
+                        'changelog' => array(
+                            ['new', 'SSL Support'],
+                            ['new', 'GUI redesign'],
+                            ['new', 'French translation'],
+                            ['fix', 'Detection algorithms rewritten'],
+                            ['fix', 'Enhanced Android 2.X compatibility'],
+                            ['new', 'Save graph button'],
+                            ['fix', '\'Add a server\': keyboard won\'t hide the half of the screen anymore'],
+                            ['new', 'PluginsList: added search button'],
+                            ['fix', 'Server removal fixed!'],
+                            ['fix', 'Fixed active state on main buttons']
+                        )
+                    ),
+                    array(
+                        'version' => '2.1',
+                        'changelog' => array(
+                            ['new', 'Swipe gesture for graphs'],
+                            ['new', 'Graphs preload'],
+                            ['fix', 'Fixed Settings crash on german devices'],
+                            ['new', 'Removed ads'],
+                            ['new', 'Disabled force orientation on graphs view']
+                        )
+                    ),
+                    array(
+                        'version' => '2.3',
+                        'changelog' => array(
+                            ['new', 'Alerts'],
+                            ['fix', 'Fixed widget issue']
+                        )
+                    ),
+                    array(
+                        'version' => '2.4',
+                        'changelog' => array(
+                            ['new', 'New icon'],
+                            ['new', 'Servers reorganisation'],
+                            ['fix', 'Bug fixes']
+                        )
+                    ),
+                    array(
+                        'version' => '2.5',
+                        'changelog' => array(
+                            ['new', 'Notifications'],
+                            ['new', 'Easily switch from one server to another while displaying graph'],
+                            ['fix', 'Stability enhancements'],
+                            ['fix', 'Bug fixes'],
+                            ['new', 'Design enhancements']
+                        )
+                    ),
+                    array(
+                        'version' => '2.6',
+                        'changelog' => array(
+                            ['new', 'Labels'],
+                            ['new', 'German translation'],
+                            ['new', 'Digest auth'],
+                            ['fix', ' Fixed crash on device boot'],
+                            ['new', 'Contextual drawer menu'],
+                            ['new', 'New server adding wizard'],
+                            ['new', 'Plugin category'],
+                            ['new', ' Android 2.X graphview : drop-down actions list'],
+                            ['new', 'URLs history when adding servers']
+                        )
+                    ),
+                    array(
+                        'version' => '2.7',
+                        'changelog' => array(
+                            ['new', 'Graphs grids'],
+                            ['new', 'Russian translation'],
+                            ['new', 'Graphs auto-update'],
+                            ['new', 'Disable screen dim when displaying graphs']
+                        )
+                    ),
+                    array(
+                        'version' => '2.8',
+                        'changelog' => array(
+                            ['new', 'Servers grouped by master'],
+                            ['fix', 'Bug fixes']
+                        )
+                    ),
+                    array(
+                        'version' => '3.0',
+                        'changelog' => array(
+                            ['new', 'Servers import/export'],
+                            ['new', 'Rescan masters for servers and plugins'],
+                            ['new', 'Plugins documentation'],
+                            ['fix', 'Fixed notifications battery drain'],
+                            ['new', 'Connection information (SSL, basic/digest auth) information now attached to masters'],
+                            ['fix', 'Performances optimisations'],
+                            ['new', 'MunStrap compatibility'],
+                            ['new', 'Custom user agent (<i>MuninForAndroid/3.0 (Android 4.4.4 KITKAT)</i> for example)'],
+                            ['new', 'Global search'],
+                            ['new', 'HD Graphs'],
+                            ['new', 'Dropped loading splash screen'],
+                            ['new', 'Open plugin in browser'],
+                            ['new', 'Tablets compatibility enhanced'],
+                            ['new', 'Fields description'],
+                            ['new', 'Flat/expanded alerts list'],
+                            ['new', 'Graph zoom now deactivatable'],
+                            ['new', 'Server configuration wizard redesigned'],
+                            ['new', 'Contextual actions (rename servers, delete labels, ...)'],
+                            ['new', 'Enhanced alerts loading'],
+                            ['new', 'Vibration on notification']
+                        )
+                    )
+                );
+                ?>
                 <p>Only the major updates are shown below.</p>
                 <div class="changelog">
                     <div class="tabContainer">
                         <ul class="digiTabs" id="sidebarTabs">
-                            <li id="tab1" onclick="tabs(this);">1.1</li><!--
-                            --><li id="tab2" onclick="tabs(this);">1.2</li><!--
-                            --><li id="tab3" onclick="tabs(this);">1.3</li><!--
-                            --><li id="tab4" onclick="tabs(this);">1.4</li><!--
-                            --><li id="tab6" onclick="tabs(this);">1.4.2</li><!--
-                            --><li id="tab8" onclick="tabs(this);">2.0</li><!--
-                            --><li id="tab9" onclick="tabs(this);">2.1</li><!--
-                            --><li id="tab11" onclick="tabs(this);">2.3</li><!--
-                            --><li id="tab12" onclick="tabs(this);">2.4</li><!--
-                            --><li id="tab13" onclick="tabs(this);">2.5</li><!--
-                            --><li id="tab14" onclick="tabs(this);">2.6</li><!--
-                            --><li id="tab16" onclick="tabs(this);">2.7</li><!--
-                            --><li id="tab17" onclick="tabs(this);">2.8</li><!--
-                            --><li id="tab18" onclick="tabs(this);" class="selected">3.0</li>
+                            <?php
+                            $i = 1;
+                            foreach ($changelog as $item) {
+                                ?><li id="tab<?php echo $i; ?>" onclick="tabs(this);" <?php echo $i == count($changelog) ? 'class="selected"' : ''; ?>><?php echo $item['version']; ?></li><?php
+                                $i++;
+                            }
+                            ?>
                         </ul>
                         <div id="tabContent" class="card"><ul>
-                            <li><span class="new">new</span>Servers import/export</li>
-                            <li><span class="new">new</span>Rescan masters for servers and plugins</li>
-                            <li><span class="new">new</span>Plugins documentation</li>
-                            <li><span class="new">fix</span>Fixed notifications battery drain</li>
-                            <li><span class="new">new</span>Connection information (SSL, basic/digest auth) information now
-                                attached to masters</li>
-                            <li><span class="fix">fix</span>Performances optimisations</li>
-                            <li><span class="new">new</span>MunStrap compatibility</li>
-                            <li><span class="new">new</span>Global search</li>
-                            <li><span class="new">new</span>HD Graphs</li>
-                            <li><span class="new">new</span>Dropped loading splash screen</li>
-                            <li><span class="new">new</span>Open plugin in browser</li>
-                            <li><span class="new">new</span>Tablets compatibility enhanced</li>
-                            <li><span class="new">new</span>Fields description</li>
-                            <li><span class="new">new</span>Flat/expanded alerts list</li>
-                            <li><span class="new">new</span>Graph zoom now deactivatable</li>
-                            <li><span class="new">new</span>Server configuration wizard redesigned</li>
-                            <li><span class="new">new</span>Contextual actions (rename servers, delete labels, ...)</li>
-                            <li><span class="new">new</span>Enhanced alerts loading</li>
-                            <li><span class="new">new</span>Vibration on notification</li>
+                            <?php
+                            $item = $changelog[count($changelog)-1];
+                            foreach ($item['changelog'] as $change) {
+                                ?><li><span class="<?php echo $change[0]; ?>"><?php echo $change[0]; ?></span> <?php echo $change[1]; ?></li><?php
+                            }
+                            ?>
                         </ul></div>
                     </div>
 
-                    <div id="tab1Content" style="display:none;"><ul>
-                        <li><span class="new">new</span> First stable release</li>
-                    </ul></div>
-                    <div id="tab2Content" style="display:none;"><ul>
-                        <li><span class="new">new</span> <strong>Munin 2.0 support</strong></li>
-                        <li><span class="new">new</span> Graph favs</li>
-                        <li><span class="new">new</span> Tutorial on first launch</li>
-                        <li><span class="new">new</span> Design enhancements</li>
-                    </ul></div>
-                    <div id="tab3Content" style="display:none;"><ul>
-                        <li><span class="new">new</span> <strong>Apache Basic Auth support</strong></li>
-                        <li><span class="new">new</span> 2 settings pages: Server + Settings</li>
-                        <li><span class="new">new</span> Choose default scale: day / week / month / year</li>
-                        <li><span class="new">new</span> Android 2.X: design enhancement</li>
-                    </ul></div>
-                    <div id="tab4Content" style="display:none;"><ul>
-                        <li><span class="new">new</span> <strong>Multi-server support!</strong></li>
-                        <li><span class="new">new</span> <strong>Multi-touch on-graph zoom</strong></li>
-                        <li><span class="new">new</span> Plugins real name now displayed</li>
-                        <li><span class="fix">fix</span> Critical issues correction</li>
-                        <li><span class="fix">fix</span> Graph double-load fixed</li>
-                        <li><span class="new">new</span> Design changes</li>
-                        <li><span class="new">new</span> Package size reduction (~80% of the previous version size)</li>
-                    </ul></div>
-                    <div id="tab6Content" style="display:none;"><ul>
-                        <li><span class="new">new</span> <b>Design enhancements</b></li>
-                        <li><span class="fix">fix</span> Critical issues fixed</li>
-                        <li><span class="fix">fix</span> Server deleting fixed</li>
-                        <li><span class="new">new</span> Local database optimisations</li>
-                        <li><span class="fix">fix</span> Fixed app crash with plugins whose name contaied special chars</li>
-                    </ul></div>
-                    <div id="tab8Content" style="display:none;"><ul>
-                        <li><span class="new">new</span>SSL Support</li>
-                        <li><span class="new">new</span>GUI redesign</li>
-                        <li><span class="new">new</span>French translation</li>
-                        <li><span class="fix">fix</span>Detection algorithms rewritten</li>
-                        <li><span class="fix">fix</span>Enhanced Android 2.X compatibility
-                        <li><span class="new">new</span>Save graph button</li>
-                        <li><span class="fix">fix</span>'Add a server': keyboard won't hide the half of the screen anymore</li>
-                        <li><span class="new">new</span>PluginsList: added search button</li>
-                        <li><span class="fix">fix</span>Server removal fixed!</li>
-                        <li><span class="fix">fix</span>Fixed active state on main buttons</li>
-                    </ul></div>
-                    <div id="tab9Content" style="display:none;"><ul>
-                        <li><span class="new">new</span>Swipe gesture for graphs</li>
-                        <li><span class="new">new</span>Graphs preload</li>
-                        <li><span class="fix">fix</span>Fixed Settings crash on german devices</li>
-                        <li><span class="new">new</span>Removed ads</li>
-                        <li><span class="new">new</span>Disabled force orientation on graphs view</li>
-                    </ul></div>
-                    <div id="tab11Content" style="display:none;"><ul>
-                        <li><span class="new">new</span>Alerts</li>
-                        <li><span class="fix">fix</span>Fixed widget issue #1</li>
-                    </ul></div>
-                    <div id="tab12Content" style="display:none;"><ul>
-                        <li><span class="new">new</span>New icon</li>
-                        <li><span class="new">new</span>Servers reorganisation</li>
-                        <li><span class="fix">fix</span>Bug fixes</li>
-                    </ul></div>
-                    <div id="tab13Content" style="display:none;"><ul>
-                        <li><span class="new">new</span>Notifications</li>
-                        <li><span class="new">new</span>Easily switch from one server to another while displaying graph</li>
-                        <li><span class="fix">fix</span>Stability enhancements</li>
-                        <li><span class="fix">fix</span>Bug fixes</li>
-                        <li><span class="new">new</span>Design enhancements</li>
-                    </ul></div>
-                    <div id="tab14Content" style="display:none;"><ul>
-                        <li><span class="new">new</span>Labels</li>
-                        <li><span class="new">new</span>German translation</li>
-                        <li><span class="new">new</span>Digest auth</li>
-                        <li><span class="fix">fix</span>Fixed crash on device boot</li>
-                        <li><span class="new">new</span>Contextual drawer menu</li>
-                        <li><span class="new">new</span>New server adding wizard</li>
-                        <li><span class="new">new</span>Plugin category</li>
-                        <li><span class="new">new</span>Android 2.X graphview : drop-down actions list</li>
-                        <li><span class="new">new</span>URLs history when adding servers</li>
-                    </ul></div>
-                    <div id="tab16Content" style="display:none;"><ul>
-                        <li><span class="new">new</span>Graphs grids</li>
-                        <li><span class="new">new</span>Russian translation</li>
-                        <li><span class="new">new</span>Graphs auto-update</li>
-                        <li><span class="new">new</span>Disable screen dim when displaying graphs</li>
-                    </ul></div>
-                    <div id="tab17Content" style="display:none;"><ul>
-                        <li><span class="new">new</span>Servers grouped by master</li>
-                        <li><span class="fix">fix</span>Bug fixes</li>
-                    </ul></div>
-                    <div id="tab18Content" style="display:none;"><ul>
-                        <li><span class="new">new</span>Servers import/export</li>
-                        <li><span class="new">new</span>Rescan masters for servers and plugins</li>
-                        <li><span class="new">new</span>Plugins documentation</li>
-                        <li><span class="new">fix</span>Fixed notifications battery drain</li>
-                        <li><span class="new">new</span>Connection information (SSL, basic/digest auth) information now
-                            attached to masters</li>
-                        <li><span class="fix">fix</span>Performances optimisations</li>
-                        <li><span class="new">new</span>MunStrap compatibility</li>
-                        <li><span class="new">new</span>Custom user agent (<i>MuninForAndroid/3.0 (Android 4.4.4 KITKAT)</i> for example)</li>
-                        <li><span class="new">new</span>Global search</li>
-                        <li><span class="new">new</span>HD Graphs</li>
-                        <li><span class="new">new</span>Dropped loading splash screen</li>
-                        <li><span class="new">new</span>Open plugin in browser</li>
-                        <li><span class="new">new</span>Tablets compatibility enhanced</li>
-                        <li><span class="new">new</span>Fields description</li>
-                        <li><span class="new">new</span>Flat/expanded alerts list</li>
-                        <li><span class="new">new</span>Graph zoom now deactivatable</li>
-                        <li><span class="new">new</span>Server configuration wizard redesigned</li>
-                        <li><span class="new">new</span>Contextual actions (rename servers, delete labels, ...)</li>
-                        <li><span class="new">new</span>Enhanced alerts loading</li>
-                        <li><span class="new">new</span>Vibration on notification</li>
-                    </ul></div>
+                    <?php
+                    $i = 1;
+                    foreach ($changelog as $item) {
+                        ?> <div id="tab<?php echo $i; ?>Content" style="display:none;"><ul><?php
+                            foreach ($item['changelog'] as $change) {
+                                ?><li><span class="<?php echo $change[0]; ?>"><?php echo $change[0]; ?></span> <?php echo $change[1]; ?></li><?php
+                            }
+                        ?> </ul></div> <?php
+                        $i++;
+                    }
+                    ?>
                 </div>
             </div>
         </div>
