@@ -310,6 +310,13 @@
                             ['new', 'Enhanced alerts loading'],
                             ['new', 'Vibration on notification']
                         )
+                    ),
+                    array(
+                        'version' => '3.2',
+                        'changelog' => array(
+                            ['new', 'Dynazoom integration'],
+                            ['fix', 'Crashs fix']
+                        )
                     )
                 );
                 ?>
