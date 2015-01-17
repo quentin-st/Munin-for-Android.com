@@ -73,7 +73,7 @@
                     <div class="step">
                         <div class="card">
                             <div class="green round">2</div><h3>Add your server(s)</h3>
-                            <div class="stepText">Configure your servers into the app. The easy to use configuration wizard makes all the work for you! :)</div>
+                            <div class="stepText">Configure your servers into the app. The easy to use configuration wizard does all the work for you! :)</div>
                         </div>
                     </div>
                     <div class="step">
@@ -84,6 +84,15 @@
                     </div>
                 </div>
                 <div class="clear"></div>
+
+                <h3>Open source</h3>
+                <p>Munin for Android is open-source! You can contribute on its <a href="https://github.com/chteuchteu/Munin-for-Android">public repository on GitHub</a>.</p>
+                <a href="https://hosted.weblate.org/engage/munin-for-android/?utm_source=widget" class="translationNotice">
+                    <img src="https://hosted.weblate.org/widgets/munin-for-android/-/svg-badge.svg" alt="Translation status" />
+                </a>
+                <p>If the app isn't available in your native language, you can help translating it using <a href="https://hosted.weblate.org/projects/munin-for-android/strings/">this easy to use online tool</a>!</p>
+                <p>Also, you can follow <a href="http://twitter.com/muninforandroid/">Munin for Android on Twitter</a> to be notified about new versions, known issues, and more!</p>
+
 
                 <div class="space"></div>
 
@@ -316,6 +325,29 @@
                         'changelog' => array(
                             ['new', 'Dynazoom integration'],
                             ['fix', 'Crashs fix']
+                        )
+                    ),
+                    array(
+                        'version' => '3.4',
+                        'changelog' => array(
+                            ['new', 'Now displaying error reason on graph view'],
+                            ['new', 'SNI compatibility'],
+                            ['fix', 'Misc bug fixes']
+                        )
+                    ),
+                    array(
+                        'version' => '3.4.5',
+                        'changelog' => array(
+                            ['new', 'Munin for Android is now open-source!'],
+                            ['new', 'Grids: using HD graphs only if needed'],
+                            ['fix', 'HD Graphs & Dynazoom bug fixes']
+                        )
+                    ),
+                    array(
+                        'version' => '3.4.7',
+                        'changelog' => array(
+                            ['new', 'Now displaying an indication if the SSL connection is secure or not'],
+                            ['fix', 'Bug fixes']
                         )
                     )
                 );

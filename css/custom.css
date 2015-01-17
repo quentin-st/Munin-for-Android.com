@@ -318,3 +318,7 @@ h1, h2, h3 {
         display: block;
     }
 }
+.translationNotice {
+    float: right;
+    margin-left: 10px;
+}
