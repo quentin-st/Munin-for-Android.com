@@ -349,6 +349,22 @@
                             ['new', 'Now displaying an indication if the SSL connection is secure or not'],
                             ['fix', 'Bug fixes']
                         )
+                    ),
+                    array(
+                        'version' => '3.4.8',
+                        'changelog' => array(
+                            ['new', 'Now displaying an indication on graph view wether the connection is secure or not'],
+                            ['fix', 'Fixed SSL on servers using self-signed certificates']
+                        )
+                    ),
+                    array(
+                        'version' => '3.4.9',
+                        'changelog' => array(
+                            ['new', 'Better translations'],
+                            ['new', 'Spanish language'],
+                            ['new', 'Speed & network usage optimizations'],
+                            ['new', 'Updated plugins documentation']
+                        )
                     )
                 );
                 ?>
