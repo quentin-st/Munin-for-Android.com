@@ -86,6 +86,10 @@
                 <div class="clear"></div>
 
                 <h3>Open source</h3>
+                <div class="gitHubButtons">
+                    <iframe src="https://ghbtns.com/github-btn.html?user=chteuchteu&repo=Munin-for-Android&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+                    <iframe src="https://ghbtns.com/github-btn.html?user=chteuchteu&repo=Munin-for-Android&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+                </div>
                 <p>Munin for Android is open-source! You can contribute on its <a href="https://github.com/chteuchteu/Munin-for-Android">public repository on GitHub</a>.</p>
                 <a href="https://hosted.weblate.org/engage/munin-for-android/?utm_source=widget" class="translationNotice">
                     <img src="https://hosted.weblate.org/widgets/munin-for-android/-/svg-badge.svg" alt="Translation status" />

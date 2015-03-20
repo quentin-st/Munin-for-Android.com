@@ -132,8 +132,7 @@ h1, h2, h3 {
     margin: auto;
 }
 .mainContent {
-    padding: 0 20px;
-    padding-bottom: 20px;
+    padding: 0 20px 20px;
     background-color: #fff;
 }
 .mainContent p {
@@ -284,7 +283,7 @@ h1, h2, h3 {
     text-transform: uppercase;
     font-size: 0.8em;
     font-weight: bold;
-    margin: 0px 5px;
+    margin: 0 5px;
     width: 40px;
     display: inline-block;
 }
@@ -297,7 +296,7 @@ h1, h2, h3 {
     text-transform: uppercase;
     font-size: 0.8em;
     font-weight: bold;
-    margin: 0px 5px;
+    margin: 0 5px;
     width: 40px;
     display: inline-block;
 }
@@ -325,6 +324,14 @@ h1, h2, h3 {
 
 .i18n_container {
     width: 300px;
-    margin: auto;
-    margin-top: 200px;
+    margin: 200px auto 0 auto;
 }
+
+.gitHubButtons {
+    float: right;
+    margin: 0 0 10px 20px;
+}
+.gitHubButtons > iframe {
+    width: 95px;
+}
+
