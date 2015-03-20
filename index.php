@@ -112,7 +112,7 @@
                     '<b>Labels</b>',
                     'Plugins documentation',
                     'MunStrap compatibility',
-                    '4 <b>languages</b>*',
+                    '8 <b>languages</b>*',
                     '<b>HTTP Basic Auth</b> support'
                 );
                 $premium_features = array(
@@ -158,7 +158,7 @@
                         <td class="ft_f">$1.49</td>
                     </tr>
                 </table>
-                <span class="notice"><i>* the app is available in english, french, german and russian</i></span>
+                <span class="notice"><i>* the app is available in english, french, german, russian, spanish, italian, ukrainian and dutch</i></span>
 
                 <div class="space"></div>
 
