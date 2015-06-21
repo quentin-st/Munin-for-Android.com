@@ -42,7 +42,7 @@
                     <li>Notifications*</li>
                     <li>Widgets*</li>
                     <li>Apache Basic & Digest* Auth support</li>
-                    <li>SSL support*</li>
+                    <li>SSL support</li>
                 </ul>
                 <div class="asterix">* available with the Features Pack</div>
             </div>
@@ -113,11 +113,11 @@
                     'Plugins documentation',
                     'MunStrap compatibility',
                     '8 <b>languages</b>*',
+					'<b>SSL</b> support',
                     '<b>HTTP Basic Auth</b> support'
                 );
                 $premium_features = array(
                     '<b>HTTP Digest Auth</b> support',
-                    '<b>SSL</b> support',
                     'Graphs <b>grids</b>',
                     'Servers configuration import/export',
                     'Graph widget',
