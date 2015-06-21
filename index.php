@@ -158,7 +158,7 @@
                         <td class="ft_f">$1.49</td>
                     </tr>
                 </table>
-                <span class="notice"><i>* the app is available in english, french, german, russian, spanish, italian, ukrainian and dutch</i></span>
+                <span class="notice"><i>* the app is available in english, french, german, russian, spanish, italian, ukrainian, hungarian, japanese, chinese and dutch</i></span>
 
                 <div class="space"></div>
 
