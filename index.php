@@ -369,7 +369,27 @@
                             ['new', 'Speed & network usage optimizations'],
                             ['new', 'Updated plugins documentation']
                         )
-                    )
+                    ),
+					array(
+						'version' => '3.5',
+						'changelog' => array(
+							['new', 'Chromecast compatibility'],
+							['new', 'Display one grid, one label or alerts on the app\'s main screen'],
+							['new', 'Grids, alerts and labels enhancements'],
+							['new', 'Configurable Chromecast App Id & Import/Export server URL'],
+							['new', 'Performances enhancements'],
+							['new', 'Smoother graphs'],
+						)
+					),
+					array(
+						'version' => '3.6',
+						'changelog' => array(
+							['new', 'SSL support is now free!'],
+							['new', 'Try to recover grid items when a server / plugin gets deleted'],
+							['new', 'Ability to disable Chromecast'],
+							['new', 'Better translations']
+						)
+					)
                 );
                 ?>
                 <p>Only the major updates are shown below.</p>
