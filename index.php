@@ -8,27 +8,28 @@
     <link href="css/bootstrap-responsive.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/favicons/manifest.json">
-    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="favicons/favicon.ico">
     <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
-    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
@@ -125,7 +126,8 @@
                     'Graphs <b>grids</b>',
                     'Servers configuration import/export',
                     'Graph widget',
-                    'Alerts widget'
+                    'Alerts widget',
+                    'Chromecast Support'
                 );
                 ?>
 
@@ -140,7 +142,7 @@
                     foreach ($free_features as $free_feature) { ?>
                         <tr class="ft_line <?php echo ($i%2==0)?'ft_i':'' ?>">
                             <td class="ft_b"><?php echo $free_feature ?></td>
-                            <td colspan="2" class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
+                            <td colspan="2" class="ft_c"><i class="mdi mdi-check"></i></td>
                         </tr>
                         <?php
                         $i++;
@@ -149,8 +151,8 @@
                     foreach ($premium_features as $premium_feature) { ?>
                         <tr class="ft_line <?php echo ($i%2==0)?'ft_i':'' ?>">
                             <td class="ft_b"><?php echo $premium_feature ?></td>
-                            <td class="ft_c"><img src="img/navigation_cancel.png" alt="Not included" /></td>
-                            <td class="ft_c"><img src="img/navigation_accept.png" alt="Included" /></td>
+                            <td class="ft_c"><i class="mdi mdi-close"></i></td>
+                            <td class="ft_c"><i class="mdi mdi-check"></i></td>
                         </tr>
                         <?php
                         $i++;
