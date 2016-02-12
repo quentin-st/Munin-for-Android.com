@@ -5,36 +5,38 @@
 body {
   margin-top: 0;
   background-color: #f9f9f9;
-  font-size: 16px; }
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif; }
 
 h1, h2, h3 {
-  font-family: 'Roboto Condensed', sans-serif;
-  color: #1184C3;
+  color: #1565C0;
   font-weight: normal; }
 
-.container {
-  max-width: 865px;
+@media (min-width: 1200px) {
+  .container {
+    max-width: 865px; } }
+.content {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.1);
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px; }
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  margin-top: 15px; }
 
-.header {
-  font-family: 'Roboto Condensed', sans-serif;
+header {
   background: url("../img/bg.jpg") no-repeat left bottom;
   padding: 10px 20px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
   color: #fff; }
-  .header .header-right {
+  header .header-right {
     float: right;
     width: 50%;
     border-radius: 2px;
     margin-top: 45px;
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2); }
   @media screen and (max-width: 645px) {
-    .header .header-right {
+    header .header-right {
       display: none; } }
-  .header h1 {
+  header h1 {
     display: inline-block;
     vertical-align: middle;
     font-weight: normal;
@@ -43,30 +45,27 @@ h1, h2, h3 {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     letter-spacing: 1px;
     color: rgba(255, 255, 255, 0.95); }
-  .header .logo {
+  header .logo {
     display: inline-block;
     width: 64px; }
-  .header .slogan {
+  header .slogan {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     font-size: 2em;
     margin-top: 15px;
     line-height: 30px; }
-  .header .asterix {
+  header .asterix {
     font-size: 0.8em;
     display: block;
     margin-top: 10px;
     color: rgba(255, 255, 255, 0.8); }
-  .header .header-features {
+  header .header-features {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     margin-top: 20px; }
-    .header .header-features ul {
+    header .header-features ul {
       list-style-type: none;
       padding: 0;
       margin: 0; }
-      .header .header-features ul li {
-        background: url("../img/accept.png") no-repeat left center;
-        min-height: 25px;
-        padding-left: 36px;
+      header .header-features ul li {
         font-size: 18px; }
 
 .clear {
@@ -136,7 +135,6 @@ h1, h2, h3 {
   overflow: hidden;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   font-size: 26px;
-  font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
   line-height: 46px; }
 
@@ -178,19 +176,17 @@ h1, h2, h3 {
   border-collapse: collapse;
   color: #555; }
   .features .ft_head, .features .ft_foot {
-    background-color: #12A1E3; }
+    background-color: #2196F3; }
   .features .ft_foot {
     font-size: 0.9em;
     color: #fff;
     font-weight: bold;
-    text-align: center;
-    font-family: 'Roboto Condensed', sans-serif; }
+    text-align: center; }
   .features .ft_h {
     width: 33%;
     padding: 5px;
     text-align: center;
     color: #fff;
-    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.3em; }
   .features .ft_b {
     border: 1px solid rgba(216, 216, 216, 0.9);
@@ -217,7 +213,7 @@ h1, h2, h3 {
   margin-bottom: 0; }
   .changelog .digiTabs > li {
     display: inline-block;
-    background-color: #12A1E3;
+    background-color: #2196F3;
     padding: 1px 5px;
     font-size: 12px;
     letter-spacing: -1px;
@@ -231,7 +227,7 @@ h1, h2, h3 {
     cursor: pointer; }
     .changelog .digiTabs > li.selected {
       background-color: #fff;
-      color: #12A1E3;
+      color: #2196F3;
       padding-top: 0;
       padding-bottom: 2px; }
 .changelog #tabContent {
