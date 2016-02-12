@@ -45,7 +45,7 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 header-wrap">
                     <div class="logo-wrap">
                         <img src="img/logo-light.png" alt="Munin for Android" /> <h1>Munin for Android</h1>
                     </div>
@@ -58,42 +58,51 @@
         </div>
     </header>
     <div class="container">
-        <div class="content">
-            <div class="content-top">
-                <img src="img/screenshot1.png" class="header-right" alt="Screenshot" />
-                <div class="slogan">Keep an eye on your servers,<br />whenever, wherever!</div>
-                <div class="header-features">
-                    <ul>
-                        <li><i class="mdi mdi-check"></i> Multi-servers support</li>
-                        <li><i class="mdi mdi-check"></i> Labels</li>
-                        <li><i class="mdi mdi-check"></i> Grids</li>
-                        <li><i class="mdi mdi-check"></i> Alerts</li>
-                        <li><i class="mdi mdi-check"></i> Notifications*</li>
-                        <li><i class="mdi mdi-check"></i> Widgets*</li>
-                        <li><i class="mdi mdi-check"></i> Apache Basic & Digest* Auth support</li>
-                        <li><i class="mdi mdi-check"></i> SSL support</li>
-                    </ul>
-                    <div class="asterix">* available with the Features Pack</div>
+        <div class="row">
+            <div class="col-md-12 content">
+                <div class="row">
+                    <div class="content-top">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-7">
+                                <div class="slogan">Keep an eye on your servers,<br />whenever, wherever!</div>
+                                <div class="header-features">
+                                    <ul>
+                                        <li><i class="mdi mdi-check"></i> Multi-servers support</li>
+                                        <li><i class="mdi mdi-check"></i> Labels</li>
+                                        <li><i class="mdi mdi-check"></i> Grids</li>
+                                        <li><i class="mdi mdi-check"></i> Alerts</li>
+                                        <li><i class="mdi mdi-check"></i> Notifications*</li>
+                                        <li><i class="mdi mdi-check"></i> Widgets*</li>
+                                        <li><i class="mdi mdi-check"></i> Apache Basic & Digest* Auth support</li>
+                                        <li><i class="mdi mdi-check"></i> SSL support</li>
+                                    </ul>
+                                    <div class="asterix">* available with the Features Pack</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-5">
+                                <img src="img/screenshot.png" class="header-right" alt="Munin for Android" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="gplay_container" class="gplay_container">
+                        <div id="gplay" class="gplay">
+                            <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.munin" class="gplay_link button button-elevated">
+                                <img src="img/logo-mdpi.png" alt="Download Munin for Android on Google Play" />
+                                Munin for Android<br />FREE
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.muninforandroidfeaturespack" class="gplay_link button button-elevated">
+                                <img src="img/logo-fp-hdpi.png" alt="Download Munin for Android Features Pack on Google Play" />
+                                MfA Features Pack<br />$1.5
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="clear"></div>
-            </div>
-            <div id="gplay_container" class="gplay_container">
-                <div id="gplay" class="gplay">
-                    <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.munin" class="gplay_link button button-elevated">
-                        <img src="img/logo-mdpi.png" alt="Download Munin for Android on Google Play" />
-                        Munin for Android<br />FREE
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.muninforandroidfeaturespack" class="gplay_link button button-elevated">
-                        <img src="img/logo-fp-hdpi.png" alt="Download Munin for Android Features Pack on Google Play" />
-                        MfA Features Pack<br />$1.5
-                    </a>
-                </div>
-            </div>
-            <div id="mainContent" class="mainContent">
-                <div class="share">
-                    <div class="addthis_native_toolbox"></div>
-                </div>
-                <div class="container-fluid">
+
+                <div id="mainContent" class="mainContent">
+                    <div class="share">
+                        <div class="addthis_native_toolbox"></div>
+                    </div>
                     <h2>What is Munin for Android?</h2>
                     <p>Munin for Android is an Android app allowing you to display Munin graphs of your server on your Android-based device. It is very simple:</p>
                     <div class="row steps">
@@ -194,20 +203,26 @@
                             </tr>
                         </tfoot>
                     </table>
-                    <span class="notice"><i>* the app is available in english, french, german, russian, spanish, italian, ukrainian, hungarian, japanese, chinese and dutch</i></span>
+                    <span class="notice"><i>* the app is available in english, french, german, russian, spanish, italian,
+                            ukrainian, hungarian, japanese, chinese and dutch</i></span>
 
                     <div class="space"></div>
 
-                    <img src="img/screenshot2.png" class="aside-img" alt="Screenshot" />
-
-                    <h2>Is my server supported?</h2>
-                    <p>Yes it is! Munin for Android is compatible with almost every Munin version and server configuration, even if you use <a href="https://github.com/jonnymccullagh/munstrap#munstrap">Munstrap</a>.
-                        If you think that your server isn't supported, feel free to <a href="mailto:support@munin-for-android.com">contact me</a> so we can discuss about it!</p>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <h2>Is my server supported?</h2>
+                            <p>Yes it is! Munin for Android is compatible with almost every Munin version and server configuration,
+                                even if you use <a href="https://github.com/jonnymccullagh/munstrap#munstrap">Munstrap</a>.
+                                If you think that your server isn't supported, feel free to
+                                <a href="mailto:support@munin-for-android.com">contact me</a> so we can discuss about it!</p>
+                        </div>
+                        <div class="col-md-5">
+                            <h2>Changelog</h2>
+                            <p>You can browse each version changelog on <a href="https://github.com/chteuchteu/Munin-for-Android/releases" target="_blank">GitHub</a>.</p>
+                        </div>
+                    </div>
 
                     <div class="space"></div>
-
-                    <h2>Changelog</h2>
-                    <p>You can browse each version changelog on <a href="https://github.com/chteuchteu/Munin-for-Android/releases" target="_blank">GitHub</a>.</p>
                 </div>
             </div>
         </div>
@@ -216,18 +231,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script>
-        function tabs(x) {
-            var lis=document.getElementById("sidebarTabs").childNodes; //gets all the LI from the UL
-
-            for(i=0;i<lis.length;i++) {
-                lis[i].className=""; //removes the classname from all the LI
-            }
-            x.className="selected"; //the clicked tab gets the classname selected
-            var res=document.getElementById("tabContent");  //the resource for the main tabContent
-            var tab=x.id;
-            res.innerHTML=document.getElementById(tab + "Content").innerHTML;
-        }
-
         $(window).scroll(function() {
             if ($(window).width() < 646)
                 $('#gplay').removeClass('gplay_cont_fixed');
@@ -255,6 +258,5 @@
 	  ga('send', 'pageview');
 	</script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-543b9bcb351959fb" async></script>
-
 </body>
 </html>

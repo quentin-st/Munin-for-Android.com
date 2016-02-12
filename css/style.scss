@@ -37,21 +37,12 @@ h1, h2, h3 {
 	font-weight: normal;
 }
 
-// Container: not too large
-@media (min-width: 1200px) {
-	.container{
-		max-width: 865px;
-	}
-}
-
 // Set content overlapping header
-@media (min-width: 768px) {
-	header {
-		padding-bottom: $content-offset;
-	}
-	.content {
-		margin-top: -$content-offset;
-	}
+header {
+	padding-bottom: $content-offset;
+}
+.content {
+	margin-top: -$content-offset;
 }
 
 header {
@@ -59,8 +50,11 @@ header {
 	padding-bottom: $content-offset;
 	background-color: $color-primary;
 
-	.logo-wrap {
+	.header-wrap {
 		margin: 25px 0;
+	}
+
+	.logo-wrap {
 		float: left;
 
 		h1 {
@@ -78,9 +72,9 @@ header {
 		}
 	}
 	.menu {
+		padding-top: 14px;
 		cursor: default;
 		text-align: right;
-		margin-top: 38px;
 
 		a {
 			display: inline-block;
@@ -108,9 +102,17 @@ header {
 
 .content {
 	margin-bottom: 15px;
+	background-color: #fff;
 	@extend .elevation-middle;
-	@include box-shadow(0 8px 17px 0 rgba(0, 0, 0, 0.1));
 	@include border-radius(2px);
+}
+
+.mainContent {
+	padding: 0 15px;
+
+	@media screen and (max-width: 645px) {
+		padding: 0 5px;
+	}
 }
 
 .content-top {
@@ -120,15 +122,11 @@ header {
 	@include background-size(cover);
 	@include border-radius(2px 2px 0 0);
 
-	.header-right {
-		float: right;
-		width: 50%;
-		margin-top: 45px;
+	img.header-right {
+		margin: 25px 0;
+		max-width: 100%;
 		@include border-radius(2px);
-		@include box-shadow(0 8px 17px 0 rgba(0, 0, 0, 0.2));
-	}
-	@media screen and (max-width: 645px) {
-		.header-right { display: none; }
+		@extend .elevation-high;
 	}
 
 	.slogan {
@@ -225,26 +223,22 @@ header {
 	}
 }
 
-.mainContent {
-	padding: 0 20px 20px;
-	background-color: #fff;
+.share {
+	padding: 10px;
+	width: 300px;
+	max-width: 100%;
+	margin: auto;
 
-	.share {
-		padding: 10px;
-		width: 300px;
-		margin: auto;
-
-		ul li {
-			display: inline-block;
-			text-align: center;
-			padding: 14px;
-		}
+	ul li {
+		display: inline-block;
+		text-align: center;
+		padding: 14px;
 	}
+}
 
-	p {
-		text-align: justify;
-		color: #555;
-	}
+p {
+	text-align: justify;
+	color: #555;
 }
 
 .steps {
@@ -289,6 +283,8 @@ header {
 
 .features {
 	width: 100%;
+	margin: auto;
+	max-width: 810px;
 	color: #555;
 
 	thead {
@@ -351,6 +347,7 @@ header {
 .notice {
 	font-size: 0.8em;
 	color: #888;
+	text-align: center;
 }
 
 .aside-img {
@@ -358,7 +355,7 @@ header {
 	width: 50%;
 	margin-left: 15px;
 	@include border-radius(2px);
-	@include box-shadow(0 8px 17px 0 rgba(0, 0, 0, 0.1));
+	@extend .elevation-low;
 }
 @media screen and (max-width: 635px) {
 	.aside-img {
