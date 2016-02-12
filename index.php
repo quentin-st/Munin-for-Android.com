@@ -42,10 +42,24 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo-wrap">
+                        <img src="img/logo-light.png" alt="Munin for Android" /> <h1>Munin for Android</h1>
+                    </div>
+                    <div class="menu">
+                        <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.munin"><i class="mdi mdi-download"></i> Download</a>
+                        <a href="https://github.com/chteuchteu/Munin-for-Android"><i class="mdi mdi-github-circle"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <div class="container">
         <div class="content">
-            <header>
-                <img src="img/logo-hdpi.png" class="logo" alt="Munin for Android" /> <h1>Munin for Android</h1>
+            <div class="content-top">
                 <img src="img/screenshot1.png" class="header-right" alt="Screenshot" />
                 <div class="slogan">Keep an eye on your servers,<br />whenever, wherever!</div>
                 <div class="header-features">
@@ -62,13 +76,17 @@
                     <div class="asterix">* available with the Features Pack</div>
                 </div>
                 <div class="clear"></div>
-            </header>
+            </div>
             <div id="gplay_container" class="gplay_container">
                 <div id="gplay" class="gplay">
-                    <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.munin" class="gplay_link">
-                        <img src="img/logo-mdpi.png" alt="Download Munin for Android on Google Play" />Munin for Android<br />FREE</a>
-                    <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.muninforandroidfeaturespack" class="gplay_link">
-                        <img src="img/logo-fp-hdpi.png" alt="Download Munin for Android Features Pack on Google Play" />MfA Features Pack<br />$1.5</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.munin" class="gplay_link button button-elevated">
+                        <img src="img/logo-mdpi.png" alt="Download Munin for Android on Google Play" />
+                        Munin for Android<br />FREE
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.muninforandroidfeaturespack" class="gplay_link button button-elevated">
+                        <img src="img/logo-fp-hdpi.png" alt="Download Munin for Android Features Pack on Google Play" />
+                        MfA Features Pack<br />$1.5
+                    </a>
                 </div>
             </div>
             <div id="mainContent" class="mainContent">
@@ -78,24 +96,18 @@
                 <div class="container-fluid">
                     <h2>What is Munin for Android?</h2>
                     <p>Munin for Android is an Android app allowing you to display Munin graphs of your server on your Android-based device. It is very simple:</p>
-                    <div class="steps">
-                        <div class="step">
-                            <div class="card">
-                                <div class="green round">1</div><h3>Install the app</h3>
-                                <div class="stepText">Download the app from Google Play on your device(s). The oldest supported Android version is Ice Cream Sandwich (4.0).</div>
-                            </div>
+                    <div class="row steps">
+                        <div class="col-sm-4 step">
+                            <div class="green round">1</div><h3>Install the app</h3>
+                            <div class="stepText">Download the app from Google Play on your device(s). The oldest supported Android version is Ice Cream Sandwich (4.0).</div>
                         </div>
-                        <div class="step">
-                            <div class="card">
-                                <div class="green round">2</div><h3>Add your server(s)</h3>
-                                <div class="stepText">Configure your servers into the app. The easy to use configuration wizard does all the work for you! :)</div>
-                            </div>
+                        <div class="col-sm-4 step">
+                            <div class="green round">2</div><h3>Add your server(s)</h3>
+                            <div class="stepText">Configure your servers into the app. The easy to use configuration wizard does all the work for you! :)</div>
                         </div>
-                        <div class="step">
-                            <div class="card">
-                                <div class="green round">3</div><h3>Enjoy!</h3>
-                                <div class="stepText">Display Munin graphs quickly using Graphs, or setup labels and grids to unleash the power of Munin for Android</div>
-                            </div>
+                        <div class="col-sm-4 step">
+                            <div class="green round">3</div><h3>Enjoy!</h3>
+                            <div class="stepText">Display Munin graphs quickly using Graphs, or setup labels and grids to unleash the power of Munin for Android</div>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -141,38 +153,46 @@
                     );
                     ?>
 
-                    <table class="features card">
-                        <tr class="ft_head">
-                            <td class="ft_h"></td>
-                            <td class="ft_h">Munin for Android</td>
-                            <td class="ft_h">Features Pack</td>
-                        </tr>
-                        <?php
-                        $i=0;
-                        foreach ($free_features as $free_feature) { ?>
-                            <tr class="ft_line <?php echo ($i%2==0)?'ft_i':'' ?>">
-                                <td class="ft_b"><?php echo $free_feature ?></td>
-                                <td colspan="2" class="ft_c"><i class="mdi mdi-check"></i></td>
+                    <table class="features elevation-low">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>Munin for Android</td>
+                                <td>Features Pack</td>
                             </tr>
-                            <?php
-                            $i++;
-                        }
+                        </thead>
 
-                        foreach ($premium_features as $premium_feature) { ?>
-                            <tr class="ft_line <?php echo ($i%2==0)?'ft_i':'' ?>">
-                                <td class="ft_b"><?php echo $premium_feature ?></td>
-                                <td class="ft_c"><i class="mdi mdi-close"></i></td>
-                                <td class="ft_c"><i class="mdi mdi-check"></i></td>
-                            </tr>
+                        <tbody>
                             <?php
-                            $i++;
-                        }
-                        ?>
-                        <tr class="ft_foot">
-                            <td class="ft_f1">Price</td>
-                            <td class="ft_f">FREE!</td>
-                            <td class="ft_f">$1.49</td>
-                        </tr>
+                            $i=0;
+                            foreach ($free_features as $free_feature) { ?>
+                                <tr class="<?php echo ($i%2==0)?'ft_i':'' ?>">
+                                    <td><?php echo $free_feature ?></td>
+                                    <td colspan="2"><i class="mdi mdi-check"></i></td>
+                                </tr>
+                                <?php
+                                $i++;
+                            }
+
+                            foreach ($premium_features as $premium_feature) { ?>
+                                <tr class="<?php echo ($i%2==0)?'ft_i':'' ?>">
+                                    <td><?php echo $premium_feature ?></td>
+                                    <td><i class="mdi mdi-close"></i></td>
+                                    <td><i class="mdi mdi-check"></i></td>
+                                </tr>
+                                <?php
+                                $i++;
+                            }
+                            ?>
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <td>Price</td>
+                                <td>FREE!</td>
+                                <td>$1.49</td>
+                            </tr>
+                        </tfoot>
                     </table>
                     <span class="notice"><i>* the app is available in english, french, german, russian, spanish, italian, ukrainian, hungarian, japanese, chinese and dutch</i></span>
 
@@ -187,261 +207,7 @@
                     <div class="space"></div>
 
                     <h2>Changelog</h2>
-                    <?php
-                    $changelog = array(
-                        array(
-                            'version' => '1.1',
-                            'changelog' => array(
-                                ['new', 'First stable release']
-                            )
-                        ),
-                        array(
-                            'version' => '1.2',
-                            'changelog' => array(
-                                ['new', '<strong>Munin 2.0 support</strong>'],
-                                ['new', 'Graph favs'],
-                                ['new', 'Tutorial on first launch'],
-                                ['new', 'Design enhancements']
-                            )
-                        ),
-                        array(
-                            'version' => '1.3',
-                            'changelog' => array(
-                                ['new', '<strong>Apache Basic Auth support</strong>'],
-                                ['new', '2 settings pages: Server + Settings'],
-                                ['new', 'Choose default scale: day / week / month / year'],
-                                ['new', 'Android 2.X: design enhancement']
-                            )
-                        ),
-                        array(
-                            'version' => '1.4',
-                            'changelog' => array(
-                                ['new', '<strong>Multi-server support!</strong>'],
-                                ['new', '<strong>Multi-touch on-graph zoom</strong>'],
-                                ['new', 'Plugins real name now displayed'],
-                                ['fix', 'Critical issues correction'],
-                                ['fix', 'Graph double-load fixed'],
-                                ['new', 'Design changes'],
-                                ['new', 'Package size reduction (~80% of the previous version size)']
-                            )
-                        ),
-                        array(
-                            'version' => '1.4.2',
-                            'changelog' => array(
-                                ['new', '<b>Design enhancements</b>'],
-                                ['fix', 'Critical issues fixed'],
-                                ['fix', 'Server deleting fixed'],
-                                ['new', 'Local database optimisations'],
-                                ['fix', 'Fixed app crash with plugins whose name contaied special chars']
-                            )
-                        ),
-                        array(
-                            'version' => '2.0',
-                            'changelog' => array(
-                                ['new', 'SSL Support'],
-                                ['new', 'GUI redesign'],
-                                ['new', 'French translation'],
-                                ['fix', 'Detection algorithms rewritten'],
-                                ['fix', 'Enhanced Android 2.X compatibility'],
-                                ['new', 'Save graph button'],
-                                ['fix', '\'Add a server\': keyboard won\'t hide the half of the screen anymore'],
-                                ['new', 'PluginsList: added search button'],
-                                ['fix', 'Server removal fixed!'],
-                                ['fix', 'Fixed active state on main buttons']
-                            )
-                        ),
-                        array(
-                            'version' => '2.1',
-                            'changelog' => array(
-                                ['new', 'Swipe gesture for graphs'],
-                                ['new', 'Graphs preload'],
-                                ['fix', 'Fixed Settings crash on german devices'],
-                                ['new', 'Removed ads'],
-                                ['new', 'Disabled force orientation on graphs view']
-                            )
-                        ),
-                        array(
-                            'version' => '2.3',
-                            'changelog' => array(
-                                ['new', 'Alerts'],
-                                ['fix', 'Fixed widget issue']
-                            )
-                        ),
-                        array(
-                            'version' => '2.4',
-                            'changelog' => array(
-                                ['new', 'New icon'],
-                                ['new', 'Servers reorganisation'],
-                                ['fix', 'Bug fixes']
-                            )
-                        ),
-                        array(
-                            'version' => '2.5',
-                            'changelog' => array(
-                                ['new', 'Notifications'],
-                                ['new', 'Easily switch from one server to another while displaying graph'],
-                                ['fix', 'Stability enhancements'],
-                                ['fix', 'Bug fixes'],
-                                ['new', 'Design enhancements']
-                            )
-                        ),
-                        array(
-                            'version' => '2.6',
-                            'changelog' => array(
-                                ['new', 'Labels'],
-                                ['new', 'German translation'],
-                                ['new', 'Digest auth'],
-                                ['fix', ' Fixed crash on device boot'],
-                                ['new', 'Contextual drawer menu'],
-                                ['new', 'New server adding wizard'],
-                                ['new', 'Plugin category'],
-                                ['new', ' Android 2.X graphview : drop-down actions list'],
-                                ['new', 'URLs history when adding servers']
-                            )
-                        ),
-                        array(
-                            'version' => '2.7',
-                            'changelog' => array(
-                                ['new', 'Graphs grids'],
-                                ['new', 'Russian translation'],
-                                ['new', 'Graphs auto-update'],
-                                ['new', 'Disable screen dim when displaying graphs']
-                            )
-                        ),
-                        array(
-                            'version' => '2.8',
-                            'changelog' => array(
-                                ['new', 'Servers grouped by master'],
-                                ['fix', 'Bug fixes']
-                            )
-                        ),
-                        array(
-                            'version' => '3.0',
-                            'changelog' => array(
-                                ['new', 'Servers import/export'],
-                                ['new', 'Rescan masters for servers and plugins'],
-                                ['new', 'Plugins documentation'],
-                                ['fix', 'Fixed notifications battery drain'],
-                                ['new', 'Connection information (SSL, basic/digest auth) information now attached to masters'],
-                                ['fix', 'Performances optimisations'],
-                                ['new', 'MunStrap compatibility'],
-                                ['new', 'Custom user agent (<i>MuninForAndroid/3.0 (Android 4.4.4 KITKAT)</i> for example)'],
-                                ['new', 'Global search'],
-                                ['new', 'HD Graphs'],
-                                ['new', 'Dropped loading splash screen'],
-                                ['new', 'Open plugin in browser'],
-                                ['new', 'Tablets compatibility enhanced'],
-                                ['new', 'Fields description'],
-                                ['new', 'Flat/expanded alerts list'],
-                                ['new', 'Graph zoom now deactivatable'],
-                                ['new', 'Server configuration wizard redesigned'],
-                                ['new', 'Contextual actions (rename servers, delete labels, ...)'],
-                                ['new', 'Enhanced alerts loading'],
-                                ['new', 'Vibration on notification']
-                            )
-                        ),
-                        array(
-                            'version' => '3.2',
-                            'changelog' => array(
-                                ['new', 'Dynazoom integration'],
-                                ['fix', 'Crashs fix']
-                            )
-                        ),
-                        array(
-                            'version' => '3.4',
-                            'changelog' => array(
-                                ['new', 'Now displaying error reason on graph view'],
-                                ['new', 'SNI compatibility'],
-                                ['fix', 'Misc bug fixes']
-                            )
-                        ),
-                        array(
-                            'version' => '3.4.5',
-                            'changelog' => array(
-                                ['new', 'Munin for Android is now open-source!'],
-                                ['new', 'Grids: using HD graphs only if needed'],
-                                ['fix', 'HD Graphs & Dynazoom bug fixes']
-                            )
-                        ),
-                        array(
-                            'version' => '3.4.7',
-                            'changelog' => array(
-                                ['new', 'Now displaying an indication if the SSL connection is secure or not'],
-                                ['fix', 'Bug fixes']
-                            )
-                        ),
-                        array(
-                            'version' => '3.4.8',
-                            'changelog' => array(
-                                ['new', 'Now displaying an indication on graph view wether the connection is secure or not'],
-                                ['fix', 'Fixed SSL on servers using self-signed certificates']
-                            )
-                        ),
-                        array(
-                            'version' => '3.4.9',
-                            'changelog' => array(
-                                ['new', 'Better translations'],
-                                ['new', 'Spanish language'],
-                                ['new', 'Speed & network usage optimizations'],
-                                ['new', 'Updated plugins documentation']
-                            )
-                        ),
-                        array(
-                            'version' => '3.5',
-                            'changelog' => array(
-                                ['new', 'Chromecast compatibility'],
-                                ['new', 'Display one grid, one label or alerts on the app\'s main screen'],
-                                ['new', 'Grids, alerts and labels enhancements'],
-                                ['new', 'Configurable Chromecast App Id & Import/Export server URL'],
-                                ['new', 'Performances enhancements'],
-                                ['new', 'Smoother graphs'],
-                            )
-                        ),
-                        array(
-                            'version' => '3.6',
-                            'changelog' => array(
-                                ['new', 'SSL support is now free!'],
-                                ['new', 'Try to recover grid items when a server / plugin gets deleted'],
-                                ['new', 'Ability to disable Chromecast'],
-                                ['new', 'Better translations']
-                            )
-                        )
-                    );
-                    ?>
-                    <p>Only the major updates are shown below.</p>
-                    <div class="changelog">
-                        <div class="tabContainer">
-                            <ul class="digiTabs" id="sidebarTabs">
-                                <?php
-                                $i = 1;
-                                foreach ($changelog as $item) {
-                                    ?><li id="tab<?php echo $i; ?>" onclick="tabs(this);" <?php echo $i == count($changelog) ? 'class="selected"' : ''; ?>><?php echo $item['version']; ?></li><?php
-                                    $i++;
-                                }
-                                ?>
-                            </ul>
-                            <div id="tabContent" class="card"><ul>
-                                <?php
-                                $item = $changelog[count($changelog)-1];
-                                foreach ($item['changelog'] as $change) {
-                                    ?><li><span class="<?php echo $change[0]; ?>"><?php echo $change[0]; ?></span> <?php echo $change[1]; ?></li><?php
-                                }
-                                ?>
-                            </ul></div>
-                        </div>
-
-                        <?php
-                        $i = 1;
-                        foreach ($changelog as $item) {
-                            ?> <div id="tab<?php echo $i; ?>Content" style="display:none;"><ul><?php
-                                foreach ($item['changelog'] as $change) {
-                                    ?><li><span class="<?php echo $change[0]; ?>"><?php echo $change[0]; ?></span> <?php echo $change[1]; ?></li><?php
-                                }
-                            ?> </ul></div> <?php
-                            $i++;
-                        }
-                        ?>
-                    </div>
+                    <p>You can browse each version changelog on <a href="https://github.com/chteuchteu/Munin-for-Android/releases" target="_blank">GitHub</a>.</p>
                 </div>
             </div>
         </div>
