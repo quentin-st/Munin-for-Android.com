@@ -1,4 +1,5 @@
 {
-    "projectType":  "generic",
-    "branch" :      "release"
+    "projectType": "generic",
+    "branch":      "release",
+    "passes":      "+scss"
 }
