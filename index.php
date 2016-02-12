@@ -218,8 +218,8 @@
                             </tr>
                         </tfoot>
                     </table>
-                    <span class="notice"><i>* the app is available in english, french, german, russian, spanish, italian,
-                            ukrainian, hungarian, japanese, chinese and dutch</i></span>
+                    <div class="notice"><i>* the app is available in english, french, german, russian, spanish, italian,
+                            ukrainian, hungarian, japanese, chinese and dutch</i></div>
 
                     <div class="space"></div>
 
@@ -253,7 +253,7 @@
             if ($(window).width() < 646)
                 $('#gplay').removeClass('gplay_cont_fixed');
             else {
-                if ($(this).scrollTop() > $('#gplay_container').position().top)
+                if ($(this).scrollTop() > $('#gplay_container').offset().top)
                     $('#gplay').addClass('gplay_cont_fixed');
                 else
                     $('#gplay').removeClass('gplay_cont_fixed');
