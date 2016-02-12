@@ -225,6 +225,9 @@
                     <div class="space"></div>
                 </div>
             </div>
+            <div class="col-md-12 copyright">
+                <p>&copy; <?php echo date('Y'); ?> <a href="http://www.s-quent.in" target="_blank">Quentin Stoeckel</a></p>
+            </div>
         </div>
     </div>
 

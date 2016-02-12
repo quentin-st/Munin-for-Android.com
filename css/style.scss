@@ -382,3 +382,9 @@ p {
 		width: 95px;
 	}
 }
+
+.copyright p {
+	text-align: center;
+	font-size: 10px;
+	@include opacity(0.5);
+}
