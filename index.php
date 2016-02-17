@@ -65,7 +65,7 @@
                         <img src="img/logo-light.png" alt="Munin for Android" /> <h1>Munin for Android</h1>
                     </div>
                     <div class="menu">
-                        <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.munin"><i class="mdi mdi-download"></i> Download</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.munin"><i class="mdi mdi-google-play"></i> Download</a>
                         <a href="https://github.com/chteuchteu/Munin-for-Android"><i class="mdi mdi-github-circle"></i> GitHub</a>
                     </div>
                 </div>
