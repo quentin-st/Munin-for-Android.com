@@ -119,19 +119,23 @@
                         <div class="addthis_native_toolbox"></div>
                     </div>
                     <h2>What is Munin for Android?</h2>
-                    <p>Munin for Android is an Android app allowing you to display Munin graphs of your server on your Android-based device. It is very simple:</p>
+                    <p>Munin for Android is an Android app allowing you to display Munin graphs of your server on your
+                        Android-based device. It is very simple:</p>
                     <div class="row steps">
                         <div class="col-sm-4 step">
                             <div class="green round">1</div><h3>Install the app</h3>
-                            <div class="stepText">Download the app from Google Play on your device(s). The oldest supported Android version is Ice Cream Sandwich (4.0).</div>
+                            <div class="stepText">Download the app from Google Play on your device(s). The oldest supported
+                                Android version is Ice Cream Sandwich (4.0).</div>
                         </div>
                         <div class="col-sm-4 step">
                             <div class="green round">2</div><h3>Add your server(s)</h3>
-                            <div class="stepText">Configure your servers into the app. The easy to use configuration wizard does all the work for you! :)</div>
+                            <div class="stepText">Configure your servers into the app. The easy to use configuration wizard
+                                does all the work for you! :)</div>
                         </div>
                         <div class="col-sm-4 step">
                             <div class="green round">3</div><h3>Enjoy!</h3>
-                            <div class="stepText">Display Munin graphs quickly using Graphs, or setup labels and grids to unleash the power of Munin for Android</div>
+                            <div class="stepText">Display Munin graphs quickly using Graphs, or setup labels and grids to
+                                unleash the power of Munin for Android</div>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -141,11 +145,12 @@
                         <iframe src="https://ghbtns.com/github-btn.html?user=chteuchteu&repo=Munin-for-Android&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
                         <iframe src="https://ghbtns.com/github-btn.html?user=chteuchteu&repo=Munin-for-Android&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
                     </div>
-                    <p>Munin for Android is open-source! You can contribute on its <a href="https://github.com/chteuchteu/Munin-for-Android">public repository on GitHub</a>.</p>
-                    <a href="https://hosted.weblate.org/engage/munin-for-android/?utm_source=widget" class="translationNotice">
-                        <img src="https://hosted.weblate.org/widgets/munin-for-android/-/svg-badge.svg" alt="Translation status" />
-                    </a>
-                    <p>If the app isn't available in your native language, you can help translating it using <a href="https://hosted.weblate.org/projects/munin-for-android/strings/">this easy to use online tool</a>!</p>
+                    <p>Munin for Android is open-source! You can contribute on its <a href="https://github.com/chteuchteu/Munin-for-Android">public repository on GitHub</a>.
+                        If the app isn't available in your native language, you can help translating it using
+                        <a href="https://hosted.weblate.org/projects/munin-for-android/strings/">this easy to use online tool</a>!
+                        Translation status: <a href="https://hosted.weblate.org/engage/munin-for-android/?utm_source=widget">
+                            <img src="https://hosted.weblate.org/widgets/munin-for-android/-/svg-badge.svg" alt="Translation status" />
+                        </a></p>
                     <p>Also, you can follow <a href="http://twitter.com/muninforandroid/">Munin for Android on Twitter</a> to be notified about new versions, known issues, and more!</p>
 
 
@@ -222,6 +227,16 @@
                             ukrainian, hungarian, japanese, chinese and dutch</i></div>
 
                     <div class="space"></div>
+
+                    <h2>Push notifications</h2>
+                    <p>Munin for Android allows you to receive real-time notifications when something goes wrong on your server.
+                        This feature requires you to configure your munin master installation to send notifications to our
+                        push server: step-by-step instructions are available on the <a href="https://github.com/chteuchteu/Munin-for-Android-GCM-Trigger#installation">project's GitHub page</a>.</p>
+                    <p>All the projects involved in this feature are open-source:</p>
+                    <ul>
+                        <li><a href="https://github.com/chteuchteu/Munin-for-Android-GCM-Trigger">Munin for Android GCM Trigger</a></li>
+                        <li><a href="https://github.com/chteuchteu/Munin-for-Android-GCM-Proxy">Munin for Android GCM Proxy</a></li>
+                    </ul>
 
                     <div class="row">
                         <div class="col-md-7">
