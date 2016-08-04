@@ -17,7 +17,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
 
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
@@ -151,7 +151,7 @@
                         Translation status: <a href="https://hosted.weblate.org/engage/munin-for-android/?utm_source=widget">
                             <img src="https://hosted.weblate.org/widgets/munin-for-android/-/svg-badge.svg" alt="Translation status" />
                         </a></p>
-                    <p>Also, you can follow <a href="http://twitter.com/muninforandroid/">Munin for Android on Twitter</a> to be notified about new versions, known issues, and more!</p>
+                    <p>Also, you can follow <a href="https://twitter.com/muninforandroid/">Munin for Android on Twitter</a> to be notified about new versions, known issues, and more!</p>
 
 
                     <div class="space"></div>
@@ -256,7 +256,7 @@
                 </div>
             </div>
             <div class="col-md-12 copyright">
-                <p>&copy; <?php echo date('Y'); ?> <a href="http://www.s-quent.in" target="_blank">Quentin Stoeckel</a></p>
+                <p>&copy; <?php echo date('Y'); ?> <a href="https://www.s-quent.in" target="_blank">Quentin Stoeckel</a></p>
             </div>
         </div>
     </div>
