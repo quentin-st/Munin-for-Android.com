@@ -157,8 +157,6 @@ header {
 	}
 }
 
-.clear { clear: both; }
-
 .button {
 	@extend .hoverable;
 	@include transition-duration(200ms);
@@ -382,5 +380,54 @@ p {
 .copyright p {
 	text-align: center;
 	font-size: 10px;
+	@include opacity(0.5);
+}
+
+.gcm-stats {
+	cursor: default;
+	font-family: 'Roboto Slab', serif;
+	color: #fff;
+	background-color: $color-primary;
+	padding: 5px 10px;
+	margin-top: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	@include border-radius(2px);
+	@extend .elevation-middle;
+
+	span {
+		font-size: 22px;
+		float: left;
+		line-height: 25px;
+	}
+
+	small {
+		margin-top: 10px;
+		display: inline-block;
+		@include opacity(0.6);
+	}
+
+	.hits {
+		float: right;
+		margin-top: 15px;
+
+		.hit-digit {
+			display: inline-block;
+			background-color: #080808;
+			font-size: 40px;
+			width: 35px;
+			overflow-x: hidden;
+			text-align: center;
+			@include border-radius(3px);
+			@extend .elevation-middle;
+		}
+	}
+}
+.gcm-disclaimer {
+	cursor: default;
+	display: block;
+	text-align: right;
+	font-style: italic;
+	font-size: 12px;
+	padding-right: 15px;
 	@include opacity(0.5);
 }

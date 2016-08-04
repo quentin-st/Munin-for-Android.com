@@ -17,7 +17,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400|Roboto+Slab:400" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
 
     <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
@@ -134,11 +134,31 @@
                         </div>
                         <div class="col-sm-4 step">
                             <div class="green round">3</div><h3>Enjoy!</h3>
-                            <div class="stepText">Display Munin graphs quickly using Graphs, or setup labels and grids to
-                                unleash the power of Munin for Android</div>
+                            <div class="stepText">Display Munin graphs, or setup labels and grids to unleash the power
+                                of Munin for Android. Receive push notifications on your device when Munin alerts are triggered</div>
                         </div>
                     </div>
-                    <div class="clear"></div>
+
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <?php
+                            require_once('util.php');
+                            $stats = getViewGCMStats();
+                            ?>
+                            <div class="gcm-stats">
+                                <span># of sysadmins warned about a production environment on fire:</span>
+                                <div class="hits">
+                                    <?php foreach ($stats['hits'] as $hit_digit) { ?>
+                                        <div class="hit-digit"><?php echo $hit_digit ?></div>
+                                    <?php } ?>
+                                </div>
+
+                                <small>Last one was <?php echo $stats['last_hit'] ?></small>
+                                <div class="clearfix"></div>
+                            </div>
+                            <small class="gcm-disclaimer"># of push notifications sent since August 2016</small>
+                        </div>
+                    </div>
 
                     <h3>Open source</h3>
                     <div class="gitHubButtons">
@@ -268,23 +288,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-    <script>
-        $(window).scroll(function() {
-            if ($(window).width() < 646)
-                $('#gplay').removeClass('gplay_cont_fixed');
-            else {
-                if ($(this).scrollTop() > $('#gplay_container').offset().top)
-                    $('#gplay').addClass('gplay_cont_fixed');
-                else
-                    $('#gplay').removeClass('gplay_cont_fixed');
-            }
-        });
-
-        $('#gplay').css('width', $('#gplay_container').width());
-        $(window).resize(function() {
-            $('#gplay').css('width', $('#gplay_container').width());
-        });
-    </script>
+    <script src="js/script.js"></script>
 
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
