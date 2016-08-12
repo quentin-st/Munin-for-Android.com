@@ -12,11 +12,6 @@
 
     <title>Munin for Android</title>
 
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
     <link href="https://fonts.googleapis.com/css?family=Roboto:400|Roboto+Slab:400" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.6.50/css/materialdesignicons.min.css">
 
@@ -39,7 +34,12 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#2196F3">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
     <script type="text/javascript">
         var _paq = _paq || [];
@@ -102,13 +102,17 @@
 
                     <div id="gplay_container" class="gplay_container">
                         <div id="gplay" class="gplay">
-                            <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.munin" class="gplay_link button button-elevated">
-                                <img src="img/logo-mdpi.png" alt="Download Munin for Android on Google Play" />
-                                Munin for Android<br />FREE
+                            <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.munin" class="gplay_link button button-elevated"
+                                title="Download Munin for Android on Google Play">
+                                <i class="mdi mdi-google-play"></i>
+                                Munin for Android
+                                <small>FREE</small>
                             </a>
-                            <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.muninforandroidfeaturespack" class="gplay_link button button-elevated">
-                                <img src="img/logo-fp-hdpi.png" alt="Download Munin for Android Features Pack on Google Play" />
-                                MfA Features Pack<br />$1.5
+                            <a href="https://play.google.com/store/apps/details?id=com.chteuchteu.muninforandroidfeaturespack" class="gplay_link button button-elevated"
+                                title="Download Munin for Android Features Pack on Google Play">
+                                <i class="mdi mdi-google-play"></i>
+                                + Features Pack
+                                <small>$1.50 / 0,50 €</small>
                             </a>
                         </div>
                     </div>
@@ -156,7 +160,6 @@
 
                                 <small>Last one was <strong><?php echo $stats['last_hit'] ?> ago</strong>,
                                 that's one notification every <?php echo $stats['frequency'] ?></small>
-                                <div class="clearfix"></div>
                             </div>
                             <small class="gcm-disclaimer"># of push notifications sent since August 2016</small>
                         </div>
