@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
 
     <title>Munin for Android</title>
@@ -31,7 +33,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
     <meta name="msapplication-config" content="favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#2196F3">
 </head>
 <body>
     <div class="card i18n_container"><h2>Thank you for contributing!</h2> You will be redirected in <b><span id="secs">5</span></b> seconds to the online tool we're using
@@ -40,24 +42,17 @@
     <script>
         var remainingSecs = 5;
 
-        setTimeout(
-            function() {
-                eachSecond();
-            }, 1000);
+        setTimeout(eachSecond, 1000);
 
         function eachSecond() {
             remainingSecs--;
 
             if (remainingSecs <= 0)
                 window.location.replace("https://hosted.weblate.org/projects/munin-for-android/strings/");
-            else {
-                document.getElementById('secs').innerHTML = remainingSecs;
+            else
+                setTimeout(eachSecond, 1000);
 
-                setTimeout(
-                    function() {
-                        eachSecond();
-                    }, 1000);
-            }
+            document.getElementById('secs').innerHTML = remainingSecs;
         }
     </script>
 
