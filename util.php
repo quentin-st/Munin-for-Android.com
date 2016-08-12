@@ -25,9 +25,14 @@ function getViewGCMStats() {
     /** @var DateTime $lastHit */
     $lastHit = $stats['last'];
 
+    // Compute average hits per time
+    $diff = abs($lastHit-1470344400); // 1470344400 is when we began to stat
+    $rate = $diff/$hits;
+
     return [
-        'hits' => $hits_array = str_split(str_pad($hits, strlen($hits)+1, '0', STR_PAD_LEFT)),
-        'last_hit' => compare_dates($lastHit, time())
+        'hits' => $hits_array = str_split($hits),
+        'last_hit' => compare_dates($lastHit, time()),
+        'frequency' => human_readable($rate)
     ];
 }
 
@@ -36,9 +41,21 @@ function getViewGCMStats() {
  * Adapted from http://php.net/manual/fr/ref.datetime.php#90989
  * @param $date1
  * @param $date2
+ * @param string $format
  * @return string
  */
-function compare_dates($date1, $date2) {
+function compare_dates($date1, $date2, $format='text')
+{
+    return human_readable(abs($date1-$date2), $format);
+}
+
+/**
+ * @param $diff
+ * @param string $format 'text' || 'array'
+ * @return string
+ */
+function human_readable($diff, $format='text')
+{
     $blocks = [
         ['name'=>'year', 'amount'   =>    60*60*24*365  ],
         ['name'=>'month', 'amount'  =>    60*60*24*31   ],
@@ -49,8 +66,6 @@ function compare_dates($date1, $date2) {
         ['name'=>'second', 'amount' =>    1             ]
     ];
 
-    $diff = abs($date1-$date2);
-
     $levels = 2;
     $current_level = 1;
     $result = array();
@@ -60,11 +75,13 @@ function compare_dates($date1, $date2) {
         if ($diff/$block['amount'] >= 1)
         {
             $amount = floor($diff/$block['amount']);
-            if ($amount>1) {$plural='s';} else {$plural='';}
-            $result[] = $amount.' '.$block['name'].$plural;
+            $plural = $amount>1 ? 's' : '';
+            $result[] = $format == 'text' ?
+                $amount.' '.$block['name'].$plural
+                : ['amount' => $amount, 'block' => $block['name'].$plural];
             $diff -= $amount*$block['amount'];
             $current_level++;
         }
     }
-    return implode(' ', $result).' ago';
+    return $format == 'text' ? implode(' ', $result) : $result;
 }

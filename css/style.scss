@@ -396,19 +396,20 @@ p {
 
 	span {
 		font-size: 22px;
-		float: left;
 		line-height: 25px;
+        margin-bottom: 10px;
+        display: block;
 	}
 
 	small {
-		margin-top: 10px;
-		display: inline-block;
-		@include opacity(0.6);
+        font-family: 'Roboto', sans-serif;
+		@include opacity(0.7);
 	}
 
 	.hits {
 		float: right;
 		margin-top: 15px;
+        margin-left: 10px;
 
 		.hit-digit {
 			display: inline-block;

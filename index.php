@@ -146,14 +146,16 @@
                             $stats = getViewGCMStats();
                             ?>
                             <div class="gcm-stats">
-                                <span># of sysadmins warned about a production environment on fire:</span>
                                 <div class="hits">
                                     <?php foreach ($stats['hits'] as $hit_digit) { ?>
                                         <div class="hit-digit"><?php echo $hit_digit ?></div>
                                     <?php } ?>
                                 </div>
 
-                                <small>Last one was <?php echo $stats['last_hit'] ?></small>
+                                <span># of sysadmins warned about a production environment on fire:</span>
+
+                                <small>Last one was <strong><?php echo $stats['last_hit'] ?> ago</strong>,
+                                that's one notification every <?php echo $stats['frequency'] ?></small>
                                 <div class="clearfix"></div>
                             </div>
                             <small class="gcm-disclaimer"># of push notifications sent since August 2016</small>
