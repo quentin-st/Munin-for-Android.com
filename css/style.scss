@@ -1,13 +1,20 @@
-@import "mixins";
+/**
+ * www.munin-for-android.com
+ */
+
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
 
 $color-primary: #2196F3;
 $color-primary-dark: #1565C0;
 $content-offset: 45px;
 
-.elevation-middle { @include box-shadow(0 2px 6px rgba(0, 0, 0, 0.2)); }
-.elevation-high { @include box-shadow(0 4px 10px rgba(0, 0, 0, 0.2)); }
-.elevation-low { @include box-shadow(0 1px 4px rgba(0, 0, 0, 0.15)); }
-.elevation-none { @include box-shadow(none); }
+$font-roboto: 'Roboto', sans-serif;
+$font-roboto-slab: 'Roboto Slab', serif;
+
+.elevation-middle { box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); }
+.elevation-high { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+.elevation-low { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15); }
+.elevation-none { box-shadow: none; }
 
 .hoverable {
 	@include transition-duration(150ms);
@@ -30,7 +37,7 @@ body {
 	margin-top: 0;
 	background-color: #f9f9f9;
 	font-size: 16px;
-	font-family: 'Roboto', sans-serif;
+	font-family: $font-roboto;
 }
 h1, h2, h3 {
 	color: $color-primary-dark;
@@ -81,7 +88,7 @@ header {
 			color: #fff;
 			margin: 0 2px;
 			padding: 6px 11px;
-			@include border-radius(2px);
+			border-radius: 2px;
 			@include transition-duration(150ms);
 
 			&:hover {
@@ -104,7 +111,7 @@ header {
 	margin-bottom: 15px;
 	background-color: #fff;
 	@extend .elevation-middle;
-	@include border-radius(2px);
+	border-radius: 2px;
 }
 
 .mainContent {
@@ -119,13 +126,13 @@ header {
 	color: #fff;
 	padding: 10px 20px;
 	background: url('../img/bg.jpg') no-repeat left bottom;
-	@include background-size(cover);
-	@include border-radius(2px 2px 0 0);
+	background-size: cover;
+	border-radius: 2px 2px 0 0;
 
 	img.header-right {
 		margin: 25px 0;
 		max-width: 100%;
-		@include border-radius(2px);
+		border-radius: 2px;
 		@extend .elevation-high;
 	}
 
@@ -160,7 +167,7 @@ header {
 .button {
 	@extend .hoverable;
 	@include transition-duration(200ms);
-	@include border-radius(2px);
+	border-radius: 2px;
 
 	&:hover {
 		color: inherit;
@@ -168,19 +175,19 @@ header {
 	}
 	&:focus, &:active {
 		outline: none;
-		@include box-shadow(inset 0 1px 0 0 rgba(0,0,0,0.2));
+		box-shadow: inset 0 1px 0 0 rgba(0,0,0,0.2);
 	}
 
 	&.button-elevated {
-		@include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 0 rgba(0,0,0,0.2));
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 0 rgba(0,0,0,0.2);
 
 		&:hover {
 			background: #eee;
-			@include box-shadow(0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 0 rgba(0,0,0,0.2));
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 2px 6px 0 rgba(0, 0, 0, 0.2), inset 0 0 0 0 rgba(0,0,0,0.2);
 		}
 		&:focus, &:active {
 			background: #ddd;
-			@include box-shadow(inset 0 1px 0 0 rgba(0, 0, 0, 0.2));
+			box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.2);
 		}
 	}
 }
@@ -252,7 +259,7 @@ p {
 			line-height: 46px;
 			text-align: center;
 			overflow: hidden;
-			@include border-radius(50%);
+			border-radius: 50%;
 			@extend .elevation-middle;
 		}
 		.green { background-color: #0f9d58; }
@@ -287,10 +294,10 @@ p {
 
 	thead {
 		&, & tr {
-			@include border-radius(2px 2px 0 0);
+			border-radius: 2px 2px 0 0;
 		}
-		td:first-child { @include border-radius(2px 0 0 0); }
-		td:last-child { @include border-radius(0 2px 0 0); }
+		td:first-child { border-radius: 2px 0 0 0; }
+		td:last-child { border-radius: 0 2px 0 0; }
 
 		td {
 			width: 33%;
@@ -312,10 +319,10 @@ p {
 		}
 
 		&, & tr {
-			@include border-radius(0 0 2px 2px);
+			border-radius: 0 0 2px 2px;
 		}
-		td:first-child { @include border-radius(0 0 0 2px); }
-		td:last-child { @include border-radius(0 0 2px 0); }
+		td:first-child { border-radius: 0 0 0 2px; }
+		td:last-child { border-radius: 0 0 2px 0; }
 	}
 	thead, tfoot {
 		background-color: $color-primary;
@@ -352,7 +359,7 @@ p {
 	float: right;
 	width: 50%;
 	margin-left: 15px;
-	@include border-radius(2px);
+	border-radius: 2px;
 	@extend .elevation-low;
 }
 @media screen and (max-width: 635px) {
@@ -380,18 +387,18 @@ p {
 .copyright p {
 	text-align: center;
 	font-size: 10px;
-	@include opacity(0.5);
+	opacity: 0.5;
 }
 
 .gcm-stats {
 	cursor: default;
-	font-family: 'Roboto Slab', serif;
+	font-family: $font-roboto-slab;
 	color: #fff;
 	background-color: $color-primary;
 	padding: 5px 10px;
 	margin-top: 10px;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	@include border-radius(2px);
+	border-radius: 2px;
 	@extend .elevation-middle;
 
 	span {
@@ -402,8 +409,8 @@ p {
 	}
 
 	small {
-        font-family: 'Roboto', sans-serif;
-		@include opacity(0.7);
+        font-family: $font-roboto;
+		opacity: 0.8;
 	}
 
 	.hits {
@@ -418,7 +425,7 @@ p {
 			width: 35px;
 			overflow-x: hidden;
 			text-align: center;
-			@include border-radius(3px);
+			border-radius: 3px;
 			@extend .elevation-middle;
 		}
 	}
@@ -430,5 +437,5 @@ p {
 	font-style: italic;
 	font-size: 12px;
 	padding-right: 15px;
-	@include opacity(0.5);
+	opacity: 0.5;
 }
