@@ -1,7 +1,8 @@
 /vendor/
 /logs/*
 !/logs/README.md
-/cache/
+/cache/*
+!/cache/.gitkeep
 
 /.idea/
 /bower_components/
