@@ -1,9 +1,0 @@
-Options +FollowSymLinks -MultiViews
-RewriteEngine on
-#
-# if requested hostname is non-blank
-RewriteCond %{HTTP_HOST} .
-# and if requested hostname is NOT "www.munin-for-android.com"
-RewriteCond %{HTTP_HOST} !^www\.munin-for-android\.com
-# redirect to same object in correct domain
-RewriteRule (.*) http://www.munin-for-android.com/$1 [R=301,L]
