@@ -1,4 +1,8 @@
-.idea
-*.css
-*.css.map
-bower_components/
+/vendor/
+/logs/*
+!/logs/README.md
+/cache/
+
+/.idea/
+/bower_components/
+/public/css/style.css*
