@@ -16,7 +16,7 @@
             else
                 setTimeout(eachSecond, 1000);
 
-            $('#secs').html(remainingSecs);
+            document.getElementById('secs').innerHTML = remainingSecs.toString();
         };
         setTimeout(eachSecond, 1000);
     </script>
