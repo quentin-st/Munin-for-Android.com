@@ -4,7 +4,7 @@ if (PHP_SAPI == 'cli-server') {
     // something which should probably be served as a static file
     $url  = parse_url($_SERVER['REQUEST_URI']);
     $file = __DIR__ . $url['path'];
-    if (is_file($file)) {
+    if (is_file($file) && $url['path'] != '/index.php') { // We want to redirect /index.php to /
         return false;
     }
 }
