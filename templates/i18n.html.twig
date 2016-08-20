@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="card i18n_container"><h2>Thank you for contributing!</h2> You will be redirected in <b><span id="secs">5</span></b> seconds to the online tool we're using
+        to manage translations. If not, <a href="https://hosted.weblate.org/projects/munin-for-android/strings/">click here</a>.</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        var remainingSecs = 5;
+        var eachSecond = function() {
+            remainingSecs--;
+
+            if (remainingSecs <= 0)
+                window.location.replace("https://hosted.weblate.org/projects/munin-for-android/strings/");
+            else
+                setTimeout(eachSecond, 1000);
+
+            $('#secs').html(remainingSecs);
+        };
+        setTimeout(eachSecond, 1000);
+    </script>
+{% endblock %}
