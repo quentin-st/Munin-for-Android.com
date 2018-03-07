@@ -12,7 +12,6 @@ abstract class Features
                 'Save graphs on SD card',
                 '<b>Labels</b>',
                 'Plugins documentation',
-                'MunStrap compatibility',
                 '8 <b>languages</b>*',
                 '<b>SSL</b> support',
                 '<b>HTTP Basic Auth</b> support'
