@@ -1,5 +1,0 @@
-{
-    "projectType": "generic",
-    "branch":      "release",
-    "passes":      "+composer +scss"
-}
