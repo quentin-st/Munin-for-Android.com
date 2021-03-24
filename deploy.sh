@@ -15,4 +15,4 @@ set_acl logs
 set_acl cache
 
 composer --ansi -n install --no-dev --optimize-autoloader
-sass public/css/style.scss
+sass public/css/style.scss > public/css/style.css
