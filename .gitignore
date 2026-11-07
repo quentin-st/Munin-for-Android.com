@@ -1,9 +1,10 @@
+.idea/
+.vscode/
+/coverage/
 /vendor/
+/node_modules/
 /logs/*
 !/logs/README.md
-/cache/*
-!/cache/.gitkeep
+.phpunit.result.cache
 
-/.idea/
-/bower_components/
 /public/css/style.css*

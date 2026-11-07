@@ -4,22 +4,24 @@
     "keywords": [],
     "homepage": "https://www.munin-for-android.com",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Josh Lockhart",
-            "email": "info@joshlockhart.com",
-            "homepage": "http://www.joshlockhart.com/"
-        }
-    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
         "php": ">=8.4.0",
-        "slim/slim": "^3.1",
-        "slim/php-view": "^2.0",
-        "monolog/monolog": "^1.17",
-        "slim/twig-view": "^2.1"
+        "slim/psr7": "^1.8",
+        "slim/slim": "^4.15",
+        "slim/twig-view": "^3.4"
     },
     "require-dev": {
+        "phpstan/phpstan": "^2.3",
         "roave/security-advisories": "dev-latest"
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": ["src/helpers/"]
     },
     "scripts": {
         "start": "php -S 0.0.0.0:8080 -t public public/index.php"

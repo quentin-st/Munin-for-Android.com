@@ -5,5 +5,6 @@ built upon the [Slim PHP micro framework](http://www.slimframework.com/).
 ## Contribute
 
 1. `composer install`
-3. `scss public/style.scss`
-4. `composer run start`
+2. `nvm install && npm install`
+3. `npm run build` (or `npm run watch`)
+4. `APP_ENV=dev composer run start`

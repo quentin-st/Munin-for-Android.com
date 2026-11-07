@@ -12,7 +12,11 @@ function set_acl() {
     fi
 }
 set_acl logs
-set_acl cache
+set_acl var/cache
 
 composer --ansi -n install --no-dev --optimize-autoloader
-sass public/css/style.scss > public/css/style.css
+export NVM_DIR="$HOME/.nvm"
+source "$NVM_DIR/nvm.sh"
+nvm install
+npm ci
+npm run build

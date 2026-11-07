@@ -1,34 +1,13 @@
 <?php
-if (PHP_SAPI == 'cli-server') {
-    // To help the built-in PHP dev server, check if the request was actually for
-    // something which should probably be served as a static file
-    $url  = parse_url($_SERVER['REQUEST_URI']);
-    $file = __DIR__ . $url['path'];
-    if (is_file($file) && $url['path'] != '/index.php') { // We want to redirect /index.php to /
+if (PHP_SAPI === 'cli-server') {
+    // Let the built-in dev server serve static files
+    $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    if ($path !== '/index.php' && is_file(__DIR__ . $path)) {
         return false;
     }
 }
 
 require __DIR__ . '/../vendor/autoload.php';
 
-session_start();
-
-// Instantiate the app
-$settings = require __DIR__ . '/../src/settings.php';
-$app = new \Slim\App($settings);
-
-// Set up dependencies
-require __DIR__ . '/../src/dependencies.php';
-
-// Register middleware
-require __DIR__ . '/../src/middleware.php';
-
-// Register routes
-require __DIR__ . '/../src/routes.php';
-
-// Register helpers
-require __DIR__ . '/../src/helpers/features.php';
-require __DIR__ . '/../src/helpers/gcm_stats.php';
-
-// Run app
+$app = require __DIR__ . '/../src/app.php';
 $app->run();

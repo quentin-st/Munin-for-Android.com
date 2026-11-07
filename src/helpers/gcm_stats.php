@@ -4,12 +4,17 @@ abstract class GCMStats
 {
     /**
      * Returns GCM stats queried from GCM proxy
-     * @return array
+     *
+     * @return array{'hits': number, 'last': number}
      */
-    private static function getGCMStats()
+    private static function getGCMStats(): array
     {
         $url = 'https://gcm-proxy.munin-for-android.com/stats/get';
-        $json = json_decode(file_get_contents($url), true);
+        $json = file_get_contents($url);
+        if ($json === false) {
+            throw new RuntimeException('Could not query stats');
+        }
+        $json = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
         $hits = $json['hits_count'];
         $last = $json['last_hit'];
 
@@ -22,11 +27,10 @@ abstract class GCMStats
     /**
      * Returns GCM stats directly usable in view
      */
-    public static function getViewGCMStats()
+    public static function getViewGCMStats(): array
     {
         $stats = self::getGCMStats();
         $hits = $stats['hits'];
-        /** @var DateTime $lastHit */
         $lastHit = $stats['last'];
 
         // Compute average hits per time
@@ -34,31 +38,26 @@ abstract class GCMStats
         $rate = $diff/$hits;
 
         return [
-            'hits' => str_split($hits),
-            'last_hit' => self::compare_dates($lastHit, time()),
-            'frequency' => self::human_readable($rate)
+            'hits' => str_split((string) $hits),
+            'last_hit' => self::humanReadableTimeDiff($lastHit, time()),
+            'frequency' => self::humanReadable($rate)
         ];
     }
 
     /**
      * Date difference to human readable format
+     *
      * Adapted from http://php.net/manual/fr/ref.datetime.php#90989
-     * @param $date1
-     * @param $date2
-     * @param string $format
-     * @return string
      */
-    private static function compare_dates($date1, $date2, $format='text')
+    private static function humanReadableTimeDiff(int $date1, int $date2, string $format='text'): string
     {
-        return self::human_readable(abs($date1-$date2), $format);
+        return self::humanReadable(abs($date1-$date2), $format);
     }
 
     /**
-     * @param $diff
-     * @param string $format 'text' || 'array'
-     * @return string
+     * @param 'text'|'array' $format
      */
-    private static function human_readable($diff, $format='text')
+    private static function humanReadable(int|float $diff, string $format='text'): string|array
     {
         $blocks = [
             ['name'=>'year', 'amount'   =>    60*60*24*365  ],
@@ -80,13 +79,13 @@ abstract class GCMStats
             {
                 $amount = floor($diff/$block['amount']);
                 $plural = $amount>1 ? 's' : '';
-                $result[] = $format == 'text' ?
+                $result[] = $format === 'text' ?
                     $amount.' '.$block['name'].$plural
                     : ['amount' => $amount, 'block' => $block['name'].$plural];
                 $diff -= $amount*$block['amount'];
                 $current_level++;
             }
         }
-        return $format == 'text' ? implode(' ', $result) : $result;
+        return $format === 'text' ? implode(' ', $result) : $result;
     }
 }

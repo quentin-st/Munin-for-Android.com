@@ -2,7 +2,7 @@
 
 abstract class Features
 {
-    public static function getAll()
+    public static function getAll(): array
     {
         return [
             'free' => [
