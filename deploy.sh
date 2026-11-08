@@ -14,6 +14,8 @@ function set_acl() {
 set_acl logs
 set_acl var/cache
 
+rm -rf var/cache/twig/*
+
 composer --ansi -n install --no-dev --optimize-autoloader
 export NVM_DIR="$HOME/.nvm"
 source "$NVM_DIR/nvm.sh"
