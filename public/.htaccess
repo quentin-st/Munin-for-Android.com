@@ -8,3 +8,10 @@ RewriteEngine On
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
+
+# Static files: same policy as pages (see src/app.php)
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|png|jpg|ico|svg|xml|json|txt)$">
+        Header set Cache-Control "public, max-age=3600, s-maxage=86400"
+    </FilesMatch>
+</IfModule>

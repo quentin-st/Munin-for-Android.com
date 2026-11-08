@@ -14,9 +14,18 @@ $twig = Twig::create(__DIR__ . '/../templates', [
 $app->addRoutingMiddleware();
 $app->addErrorMiddleware(getenv('APP_ENV') === 'dev', true, true);
 
+// Let Cloudflare cache pages at the edge for a day, browsers for an hour. Errors are never cached.
+// Added last so it runs outermost and sees error responses too.
+$app->add(function (Request $request, $handler): Response {
+    $response = $handler->handle($request);
+
+    return $response->getStatusCode() < 400
+        ? $response->withHeader('Cache-Control', 'public, max-age=3600, s-maxage=86400')
+        : $response->withHeader('Cache-Control', 'no-store');
+});
+
 $app->get('/', fn (Request $request, Response $response) => $twig->render($response, 'index.html.twig', [
     'features' => Features::getAll(),
-    'gcm_stats' => GCMStats::getViewGCMStats(),
 ]));
 
 $app->get('/i18n', fn (Request $request, Response $response) => $twig->render($response, 'i18n.html.twig'));

@@ -91,19 +91,15 @@
                         </div>
                     </div>
 
-                    <div class="row">
+                    <div class="row" id="gcm-stats" hidden>
                         <div class="col-md-8 col-md-offset-2">
                             <div class="gcm-stats">
-                                <div class="hits">
-                                    {% for digit in gcm_stats.hits %}
-                                        <div class="hit-digit">{{ digit }}</div>
-                                    {% endfor %}
-                                </div>
+                                <div class="hits"></div>
 
                                 <span># of sysadmins warned about a production environment on fire:</span>
 
-                                <small>Last one was <strong>{{ gcm_stats.last_hit }} ago</strong>,
-                                    that's one notification every {{ gcm_stats.frequency }}</small>
+                                <small>Last one was <strong><span class="last-hit"></span> ago</strong>,
+                                    that's one notification every <span class="frequency"></span></small>
                             </div>
                             <small class="gcm-disclaimer"># of push notifications sent since August 2016</small>
                         </div>
