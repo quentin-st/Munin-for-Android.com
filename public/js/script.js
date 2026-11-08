@@ -36,7 +36,7 @@ $(document).ready(function() {
         return result.join(' ');
     }
 
-    fetch('https://gcm-proxy.munin-for-android.com/stats/get')
+    fetch('https://gcm-proxy.munin-for-android.com/stats')
         .then(function(r) { if (!r.ok) throw new Error(r.status); return r.json(); })
         .then(function(json) {
             const hits = json.hits_count, last = json.last_hit;
